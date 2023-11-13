@@ -17,7 +17,40 @@ print("Hello, World!")
 ``````
 
 ## 1.2 Installing Python and Setting up an IDE
-Python can be easily installed on various operating systems. You can choose to use Integrated Development Environments (IDEs) such as PyCharm, Visual Studio Code, or simply work with Python in a text editor.
+Installing Python is a straightforward process, and there are different methods depending on your operating system. Below are the general steps for installing Python on Windows, macOS, and Linux.
+
+**Windows:**
+1. Download Python:
+- Visit the official Python website: [Python Downloads.](https://www.python.org/downloads/)
+- Click on the "Downloads" tab, and choose the latest version of Python (e.g., Python 3.9.7) for Windows.
+- Select the executable installer suitable for your system architecture (32-bit or 64-bit).
+2. Run the Installer:
+- Run the downloaded installer executable.
+- Check the box that says "Add Python x.x to PATH" during installation. This makes it easier to run Python from the command line.
+3. Install Python:
+- Click "Install Now" to start the installation process.
+- The installer will install Python and related tools.
+4. Verify Installation:
+- Open a command prompt (CMD) or PowerShell.
+- Type python --version or python -V to check if Python is installed and the version number.
+**macOS:**
+1. Homebrew (Recommended):
+- Open Terminal.
+- Install Homebrew (if not installed): /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+- Install Python: brew install python
+2. Verify Installation:
+- Type python3 --version or python3 -V in Terminal to check if Python is installed and the version number.
+
+**Linux (Ubuntu/Debian as an example):**
+1. Update Package List:
+- Open Terminal.
+- Run sudo apt update to update the package list.
+2. Install Python:
+- Run sudo apt install python3 to install Python 3.
+3. Verify Installation:
+- Type python3 --version or python3 -V in Terminal to check if Python is installed and the version number.
+
+You can choose to use Integrated Development Environments (IDEs) such as PyCharm, Visual Studio Code, or simply work with Python in a text editor.
 
 Example: Installing Python and running a simple script in a command prompt:
 
