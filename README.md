@@ -1,4 +1,4 @@
-# 1.Introduction to Python
+# 1. Introduction to Python
 Python is a high-level, interpreted, and general-purpose programming language known for its simplicity and readability. It has a wide range of applications:
 1. **Web Development**: Django, Pyramid, Bottle, Tornado, Flask, web2py
 2. **GUI Development**: tkInter, PyGObject, PyQt, PySide, Kivy, wxPython
@@ -65,18 +65,19 @@ print("Hello from Python!")
 python hello.py
 ````
 ## 1.3 Running Python Programs
-Python programs can be executed in different ways, including the command line, using an IDE, or running scripts in Jupyter notebooks.
+Python programs can be executed in different ways, including the command line and using an IDE.
 
-Example: Running a Python program in a Jupyter Notebook cell:
+Example: Running a Python program on the command line. There are 2 ways to achieve this:
+1. Launch the Python interpreter application. This provides an interface where you can write Python codes.
+2. Launch your computer's command prompt/terminal and type in python3 or just python and press enter.
+
+   Then input the commands as below. 
 
 ```python
-# Cell 1
 a = 5
 
-# Cell 2
 b = 10
 
-# Cell 3
 result = a + b
 print(result)
 ``````
@@ -117,7 +118,7 @@ person = {'name': 'Alice', 'age': 30}
 ## 2.1 Variables and Naming Conventions
 In Python, variables are used to store data. They must follow certain naming conventions, such as starting with a letter or underscore and consisting of letters, digits, and underscores.
 ### The do's and don'ts in naming Python variables
-1. Use Descriptive Names: Choose variable names that clearly indicate the purpose or meaning of the variable. Make your variable names self-explanatory.
+1. **Use Descriptive Names:** Choose variable names that clearly indicate the purpose or meaning of the variable. Make your variable names self-explanatory.
 ```python
 # Good
 total_price = 100.0
@@ -125,7 +126,7 @@ total_price = 100.0
 # Avoid
 x = 100.0
 ``````
-2. Follow Naming Conventions: Adhere to Python's naming conventions, such as using lowercase letters for variable names (snake_case), CamelCase for class names, and UPPERCASE_SNAKE_CASE for constants.
+2. **Follow Naming Conventions:** Adhere to Python's naming conventions, such as using lowercase letters for variable names (snake_case), CamelCase for class names, and UPPERCASE_SNAKE_CASE for constants.
 ```python
 # Good
 user_age = 25
@@ -139,7 +140,7 @@ class my_class:
     # Class definition
 pi = 3.14159
 ``````
-3. Use Meaningful Names for Functions: Function names should clearly describe what the function does. Avoid using single-letter or cryptic function names.
+3. **Use Meaningful Names for Functions:** Function names should clearly describe what the function does. Avoid using single-letter or cryptic function names.
 ```python
 # Good
 def calculate_area(length, width):
@@ -149,45 +150,45 @@ def calculate_area(length, width):
 def f(x, y):
     # Function body
 ``````
-4. Avoid Using Reserved Words: Do not use Python's reserved words or keywords as variable names. Reserved words include if, for, while, and so on.
+4. **Avoid Using Reserved Words:** Do not use Python's reserved words or keywords as variable names. Reserved words include if, for, while, and so on.
 ```python
 # Avoid
 if = 5
 ``````
-5. Make Use of Comments: If a variable name alone is not sufficient to explain its purpose, use comments to provide additional context.
+5. **Make Use of Comments:** If a variable name alone is not sufficient to explain its purpose, use comments to provide additional context.
 ```python
 total_cost = 100  # Total cost in dollars
 ``````
-6. Avoid Single-Letter Variable Names: Except for loop iterators (e.g., i, j, k), avoid using single-letter variable names. Single-letter variables are typically not descriptive.
+6. **Avoid Single-Letter Variable Names:** Except for loop iterators (e.g., i, j, k), avoid using single-letter variable names. Single-letter variables are typically not descriptive.
 ```python
 # Avoid
 x = 10
 y = "Alice"
 ``````
-7. Don't Use Meaningless Names: Avoid using names that do not convey any meaning or context about the variable's purpose.
+7. **Don't Use Meaningless Names:** Avoid using names that do not convey any meaning or context about the variable's purpose.
 ```python
 # Avoid
 temp = 42
 result = calculate()
 ``````
-8. Avoid Excessive Abbreviations: While concise names are good, excessive use of abbreviations can make your code less readable. Balance between brevity and clarity.
+8. **Avoid Excessive Abbreviations:** While concise names are good, excessive use of abbreviations can make your code less readable. Balance between brevity and clarity.
 ```python
 # Avoid
 usr_nm = "Alice"
 ``````
-9. Don't Mix Different Naming Styles: Stick to a consistent naming style throughout your code. Mixing styles can make your code inconsistent and harder to read
+9. **Don't Mix Different Naming Styles:** Stick to a consistent naming style throughout your code. Mixing styles can make your code inconsistent and harder to read
 ```python
 # Avoid
 userAge = 25
 total_cost = 100
 ``````
-10. Don't Use Inconsistent Capitalization: Variable names should not differ only in capitalization, as it can lead to confusion.
+10. **Don't Use Inconsistent Capitalization:** Variable names should not differ only in capitalization, as it can lead to confusion.
 ```python
 # Avoid
 myVariable = 42
 myvariable = "Hello"
 ``````
-12. Don't Use Names That Clash with Built-in Functions: Avoid naming variables with names that are already used as built-in functions or standard library functions. It can lead to unexpected behavior.
+12. **Don't Use Names That Clash with Built-in Functions:** Avoid naming variables with names that are already used as built-in functions or standard library functions. It can lead to unexpected behavior.
 ```python
 # Avoid
 sum = 10  # Overriding the built-in sum function
@@ -408,7 +409,6 @@ Variables can have different scopes, such as local and global. The scope of a va
 Example: Local and global variables:
 
 ```python
-Copy code
 global_var = 10
 
 def my_function():
@@ -430,12 +430,16 @@ mymodule.py (module file):
 ```python
 def greet(name):
     print(f"Hello, {name}!")
-main.py (script using the module):
 
-```python
+
 import mymodule
 
 mymodule.greet("Bob")
+
+OR
+
+from mymodule import greet
+greet('Bob')
 ``````
 *Exercises/Projects:*
 
