@@ -473,7 +473,6 @@ with open("example.txt", "r") as file:
 Writing to a text file:
 
 ```python
-Copy code
 # Open a file for writing
 with open("output.txt", "w") as file:
     file.write("This is a line of text.")
@@ -624,6 +623,29 @@ import random
 # Generate a random number between 1 and 100
 random_number = random.randint(1, 100)
 print(random_number)
+
+# Select a random element from a list
+my_list = [1, 2, 3, 4, 5]
+random_element = random.choice(my_list)
+print(random_element)
+
+
+# Shuffle a list in place
+my_list = [1, 2, 3, 4, 5]
+random.shuffle(my_list)
+print(my_list)
+
+
+
+# Select a random sample of elements from a list
+my_list = [1, 2, 3, 4, 5]
+random_sample = random.sample(my_list, 3)  # Select 3 random elements
+print(random_sample)
+
+
+# Generate a random float within a specified range
+random_float = random.uniform(1.5, 2.5)
+print(random_float)
 ``````
 ## 7.2 Working with Built-in Modules (e.g., math, datetime)
 Python has several built-in modules for mathematical operations, date and time handling, and more. You can use these modules to simplify your code.
@@ -638,6 +660,35 @@ import datetime
 # Calculate the square root of a number
 sqrt_result = math.sqrt(16)
 print(sqrt_result)
+
+# Exponential function (e^x)
+exp_result = math.exp(2)
+print(exp_result)
+
+# Natural logarithm (base e)
+log_result = math.log(8)
+print(log_result)
+
+# Logarithm with a specified base
+log_base2_result = math.log(8, 2)
+print(log_base2_result)
+
+
+# Square root
+sqrt_result = math.sqrt(25)
+print(sqrt_result)
+
+# Power (x^y)
+power_result = math.pow(2, 3)
+print(power_result)
+
+# Alternatively, you can use the ** operator for power
+power_result_alt = 2 ** 3
+print(power_result_alt)
+
+# Pi and Euler's number (e)
+pi_value = math.pi
+e_value = math.e
 
 # Get the current date and time
 current_time = datetime.datetime.now()
