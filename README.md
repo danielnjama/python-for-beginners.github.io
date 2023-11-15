@@ -787,6 +787,17 @@ print(current_datetime)
 # Create a specific date and time
 custom_datetime = datetime(2023, 11, 6, 14, 30)
 print(custom_datetime)
+
+# Parse a string to a datetime object
+date_string = "2023-11-15 08:30:00"
+parsed_datetime = datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S")
+print("Parsed Datetime:", parsed_datetime)
+
+
+# Calculate future dates
+current_datetime = datetime.now()
+future_datetime = current_datetime + timedelta(days=7)
+print("Future Date:", future_datetime)
 ``````
 ## 8.2 Formatting and Parsing Dates
 You can format date and time objects into human-readable strings and parse strings to create date and time objects using format codes.
@@ -824,6 +835,52 @@ ny_time = datetime.now(tz)
 # Perform date arithmetic
 one_week_ago = ny_time - timedelta(weeks=1)
 print(f"One week ago: {one_week_ago}")
+``````
+
+## 8.4 Time module
+The time module in Python provides functions for working with time, independent of the date. Here are some common use cases and examples of how to use the time module:
+```python
+import time
+
+# Get the current time in seconds since the epoch
+current_time = time.time()
+print("Current Time (seconds since epoch):", current_time)
+
+# Pause the execution of the program for a specified number of seconds
+print("Start")
+time.sleep(3)  # Sleep for 3 seconds
+print("End after sleeping for 3 seconds")
+
+
+# Format the current time
+current_time = time.localtime()
+formatted_time = time.strftime("%Y-%m-%d %H:%M:%S", current_time)
+print("Formatted Time:", formatted_time)
+
+
+# Measure the time taken for a code block to execute
+start_time = time.time()
+# Code block to measure
+time.sleep(2)
+end_time = time.time()
+
+elapsed_time = end_time - start_time
+print("Elapsed Time:", elapsed_time, "seconds")
+
+
+# Measure clock time
+start_clock = time.time()
+time.sleep(2)
+end_clock = time.time()
+
+# Measure process time
+start_process = time.process_time()
+time.sleep(2)
+end_process = time.process_time()
+
+print("Clock Time:", end_clock - start_clock, "seconds")
+print("Process Time:", end_process - start_process, "seconds")
+
 ``````
 *Exercises/Projects:*
 
