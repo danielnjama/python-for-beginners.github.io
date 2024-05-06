@@ -87,20 +87,28 @@ Python supports various data types like integers, floats, strings, lists, dictio
 Example: Working with basic data types:
 
 ```Python
-# Integer
+# Integer('int'):: Whole numbers without any decimal point
 age = 25
 
-# Float
+# Float('float'):: Numbers with a decimal point or in exponential form like 3.14, -0.001, 2.5e2
 price = 19.99
 
-# String
+# String('str')::A sequence of characters enclosed within single, double, or triple quotes
 name = "John Doe"
 
-# List
+# List('list')::Ordered collection of items, mutable(can be modified after creation) and enclosed within square brackets
 fruits = ['apple', 'banana', 'cherry']
 
-# Dictionary
+# Dictionary('dict')::Collection of key-value pairs, enclosed within curly braces
 person = {'name': 'Alice', 'age': 30}
+
+# Boolean
+This takes True or False
+eg: isPositive = True
+# Tuple (tuple): Similar to lists but immutable( can't be modified after creation), enclosed within parentheses
+fruits = ('apple', 'banana', 'cherry')
+# Set (set):: Unordered collection of unique items, enclosed within curly braces or created using the set() function,
+nums = {1, 2, 3}
 ``````
 *Exercises/Projects:*
 
@@ -237,16 +245,87 @@ You can manipulate and operate on data structures, such as adding, removing, or 
 Example: Manipulating data structures:
 
 ```python
-# Lists
-fruits.append('grape')
-fruits.remove('banana')
-print(fruits[0])
+# Initialize a list
+numbers = [1, 2, 3, 4, 5]
 
-# Tuples (Accessing elements)
-x, y = coordinates
+# Adding elements
+numbers.append(6)  # Adds 6 to the end of the list
+numbers.insert(2, 10)  # Inserts 10 at index 2
 
-# Dictionaries (Accessing values)
-name = person['name']
+# Removing elements
+numbers.pop()  # Removes and returns the last element
+numbers.remove(3)  # Removes the first occurrence of 3
+
+# Accessing elements
+first_element = numbers[0]  # Access the first element
+second_element = numbers[-1]  # Access the last element
+
+# Initialize a list
+colors = ['red', 'green', 'blue']
+
+# Modifying elements
+colors[0] = 'yellow'  # Modifies the first element to 'yellow'
+colors[1:3] = ['orange', 'purple']  # Replaces elements at index 1 and 2 with 'orange' and 'purple'
+
+# Concatenating lists
+more_colors = ['pink', 'brown']
+all_colors = colors + more_colors  # Concatenates two lists
+
+# Slicing lists
+first_two = colors[:2]  # Retrieves the first two elements
+last_two = colors[-2:]  # Retrieves the last two elements
+
+# Length of a list
+num_colors = len(colors)  # Returns the number of elements in the list
+
+# Sorting lists
+sorted_colors = sorted(colors)  # Returns a new list with elements sorted in ascending order
+colors.sort()  # Sorts the list in place
+
+# Reversing lists
+reversed_colors = list(reversed(colors))  # Returns a new list with elements in reversed order
+colors.reverse()  # Reverses the list in place
+
+# Clearing lists
+colors.clear()  # Removes all elements from the list
+
+
+# Define a dictionary
+person = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+# Accessing values
+name = person['name']  # Access the value associated with the 'name' key
+age = person.get('age')  # Access the value associated with the 'age' key using get method
+
+# Define a dictionary
+person = {'name': 'John', 'age': 30, 'city': 'New York'}
+
+# Adding or updating key-value pairs
+person['email'] = 'john@example.com'  # Adds a new key 'email' with value 'john@example.com'
+person.update({'age': 31, 'city': 'San Francisco'})  # Updates existing keys 'age' and 'city'
+
+# Removing key-value pairs
+del person['city']  # Removes the key 'city' and its associated value
+age = person.pop('age')  # Removes the key 'age' and returns its associated value
+
+# Accessing keys and values
+keys = person.keys()  # Returns a view object of all keys in the dictionary
+values = person.values()  # Returns a view object of all values in the dictionary
+items = person.items()  # Returns a view object of all key-value pairs in the dictionary
+
+# Checking existence of keys
+has_name = 'name' in person  # Checks if 'name' key exists in the dictionary
+has_email = 'email' not in person  # Checks if 'email' key does not exist in the dictionary
+
+# Iterating over keys, values, or items
+for key in person:
+    print(key)  # Prints each key in the dictionary
+
+for value in person.values():
+    print(value)  # Prints each value in the dictionary
+
+for key, value in person.items():
+    print(key, value)  # Prints each key-value pair in the dictionary
 ``````
 ## 2.4 Type Conversion and Type-checking
 Python allows you to convert between different data types and perform type-checking to ensure that a variable is of the expected type.
