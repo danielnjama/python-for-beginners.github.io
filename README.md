@@ -244,6 +244,7 @@ Python supports various data structures, including:
 3. Lists (ordered collections)
 4. Tuples (immutable collections)
 5. Dictionaries (key-value pairs)
+6. Boolean - Takes in True or False
 
    
 Example: Working with different data structures:
