@@ -43,14 +43,27 @@ Installing Python is a straightforward process, and there are different methods 
 
 **Linux (Ubuntu/Debian as an example):**
 1. Update Package List:
-- Open Terminal.
-- Run sudo apt update to update the package list.
+- Open Terminal and run the following:
+ 
+  ```
+  sudo apt update
+  ```
+  
 2. Install Python:
-- Run sudo apt install python3 to install Python 3.
-3. Verify Installation:
-- Type python3 --version or python3 -V in Terminal to check if Python is installed and the version number.
+   
+```
+sudo apt install python3
+```
 
-You can choose to use Integrated Development Environments (IDEs) such as PyCharm, Visual Studio Code, or simply work with Python in a text editor.
+4. Verify Installation by checking the version:
+
+```
+python3 --version
+OR
+python3 -V
+```
+
+You can choose to use Integrated Development Environments (IDEs) such as PyCharm, Visual Studio Code, the default text editor or simply work with Python on command line.
 
 Example: Installing Python and running a simple script in a command prompt:
 
