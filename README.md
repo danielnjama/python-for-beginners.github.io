@@ -31,23 +31,36 @@ Installing Python is a straightforward process, and there are different methods 
 - Click "Install Now" to start the installation process.
 - The installer will install Python and related tools.
 4. Verify Installation:
-- Open a command prompt (CMD) or PowerShell.
-- Type python --version or python -V to check if Python is installed and the version number.
+- Open a command prompt (CMD) or PowerShell and run the following to check if Python is installed and the version number.
+```
+python --version
+or
+python -V
+```
 **macOS:**
 1. Homebrew (Recommended):
 - Open Terminal.
-- Install Homebrew (if not installed): /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-- Install Python: brew install python
+- Install Homebrew (if not installed):
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+- Install Python:
+```
+brew install python
+```
 2. Verify Installation:
-- Type python3 --version or python3 -V in Terminal to check if Python is installed and the version number.
+```
+python3 --version
+or
+python3 -V
+```
 
 **Linux (Ubuntu/Debian as an example):**
 1. Update Package List:
 - Open Terminal and run the following:
- 
-  ```
-  sudo apt update
-  ```
+```
+sudo apt update
+```
   
 2. Install Python:
    
