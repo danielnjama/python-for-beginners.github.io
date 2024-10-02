@@ -49,9 +49,6 @@
     - Dictionaries
     - Key-value pairs
     - Dictionary methods
-    - Sets
-    - Unique elements in sets
-    - Set operations (union, intersection, etc.)
     - Working with Strings
     - String methods (e.g., .upper(), .lower(), .replace(), .find(), .split())
 6. Functions in Python
@@ -59,15 +56,12 @@
     - Syntax for defining functions (def)
     - Function parameters and arguments
     - Return values (return)
-    - Default and Keyword Arguments
-    - Scope (Local and Global Variables)
-    - Anonymous (Lambda) Functions
 7. Error and Exception Handling
     - What are Exceptions?
     - Common Python Errors
     - Using try, except, and finally blocks
     - Raising Exceptions
-    - 8. Working with Files
+8. Working with Files
     - Reading from a File
     - Writing to a File
     - File modes (r, w, a, etc.)
