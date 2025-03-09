@@ -406,7 +406,7 @@ else:
 
 ## Assignment 1: List Operations
 ### **Task 1: Basic List Operations**
-1. Create a list of 10 random numbers.
+1. Create a list of 10 numbers ranging from 0 to 20, ensuring that at least 3 numbers appear more than once.
 2. Find the maximum and minimum numbers from the list.
 3. Sort the list in ascending and descending order.
 4. Remove duplicate numbers from the list.
