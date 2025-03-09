@@ -269,7 +269,149 @@ person = {'name': 'Alice', 'age': 30}
 ## 2.3 Working with Data Structures
 You can manipulate and operate on data structures, such as adding, removing, or accessing elements within them.
 
-Example: Manipulating data structures:
+# String Operations 
+
+## **1. Introduction to Strings**
+A **string** in Python is a sequence of characters enclosed in **single (`'`), double (`"`), or triple (`'''` or """) quotes**.
+
+```python
+text = "Hello, Python!"
+print(text)
+```
+
+---
+
+## **2. Common String Methods**
+
+### **2.1 Changing Case**
+- `upper()`: Converts all characters to **uppercase**
+- `lower()`: Converts all characters to **lowercase**
+- `title()`: Converts the first letter of each word to uppercase
+- `capitalize()`: Converts only the first character to uppercase
+
+```python
+text = "hello world"
+print(text.upper())      # HELLO WORLD
+print(text.lower())      # hello world
+print(text.title())      # Hello World
+print(text.capitalize()) # Hello world
+```
+
+---
+
+### **2.2 String Manipulation**
+- `strip()`: Removes leading and trailing spaces
+- `lstrip()`: Removes spaces from the left
+- `rstrip()`: Removes spaces from the right
+- `replace(old, new)`: Replaces occurrences of `old` with `new`
+
+```python
+text = "  Python is fun!  "
+print(text.strip())   # "Python is fun!"
+print(text.lstrip())  # "Python is fun!  "
+print(text.rstrip())  # "  Python is fun!"
+print(text.replace("fun", "awesome"))  # "  Python is awesome!  "
+```
+
+---
+
+### **2.3 Checking and Finding Strings**
+- `startswith(substring)`: Checks if a string starts with a given substring
+- `endswith(substring)`: Checks if a string ends with a given substring
+- `find(substring)`: Returns the index of the first occurrence of the substring (-1 if not found)
+- `count(substring)`: Counts the occurrences of a substring
+
+```python
+text = "Hello, Python! Python is great."
+print(text.startswith("Hello"))  # True
+print(text.endswith("great."))   # True
+print(text.find("Python"))       # 7 (first occurrence index)
+print(text.count("Python"))      # 2
+```
+
+---
+
+### **2.4 Splitting and Joining Strings**
+- `split(separator)`: Splits a string into a list based on a separator
+- `join(iterable)`: Joins a list of strings into a single string
+
+```python
+text = "apple,banana,orange"
+fruits = text.split(",")  # ['apple', 'banana', 'orange']
+print(fruits)
+
+words = ["Python", "is", "awesome"]
+sentence = " ".join(words)  # "Python is awesome"
+print(sentence)
+```
+
+---
+
+### **2.5 String Formatting**
+- Using `format()`
+- Using f-strings (Recommended)
+
+```python
+name = "Alice"
+age = 25
+
+# Using format()
+print("My name is {} and I am {} years old.".format(name, age))
+
+# Using f-strings (Python 3.6+)
+print(f"My name is {name} and I am {age} years old.")
+```
+
+---
+
+### **2.6 Checking for Alphanumeric Characters**
+- `isalpha()`: Checks if the string contains only letters
+- `isdigit()`: Checks if the string contains only digits
+- `isalnum()`: Checks if the string contains only letters and digits
+
+```python
+text = "Python123"
+print(text.isalpha())  # False (contains numbers)
+print(text.isdigit())  # False (contains letters)
+print(text.isalnum())  # True (only letters and digits)
+```
+
+---
+
+## **3. String Indexing and Slicing**
+- **Indexing** allows access to individual characters: `text[index]`
+- **Slicing** allows extracting a portion of a string: `text[start:end:step]`
+
+```python
+text = "Python"
+print(text[0])     # 'P'
+print(text[-1])    # 'n' (last character)
+print(text[0:4])   # 'Pyth' (from index 0 to 3)
+print(text[::-1])  # 'nohtyP' (reverse the string)
+```
+
+---
+
+## **4. Escape Characters**
+- `\n`: New line
+- `\t`: Tab space
+- `\"`: Double quote
+- `\'`: Single quote
+- `\\`: Backslash
+
+```python
+text = "Hello\nWorld!"
+print(text)
+```
+**Output:**
+```
+Hello
+World!
+```
+
+---
+
+
 
 ## List Operations
 ```python
@@ -442,6 +584,7 @@ else:
 ### **Task 4: String Processing**
 1. Write a program to:
    - Take a string as input and print it.
+   - Print it in reverse order.
    - Convert the string into **uppercase** and **lowercase**.
    - Remove all spaces from the string.
    - Replace all occurrences of `"Python"` with `"Java"` in a given string.(Identify any string and repalce its occurence with a string of choice)
