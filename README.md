@@ -265,12 +265,13 @@ coordinates = (10, 20)
 
 # Dictionaries
 person = {'name': 'Alice', 'age': 30}
-``````
+```
 ## 2.3 Working with Data Structures
 You can manipulate and operate on data structures, such as adding, removing, or accessing elements within them.
 
 Example: Manipulating data structures:
 
+## List Operations
 ```python
 # Initialize a list
 numbers = [1, 2, 3, 4, 5]
@@ -278,14 +279,24 @@ numbers = [1, 2, 3, 4, 5]
 # Adding elements
 numbers.append(6)  # Adds 6 to the end of the list
 numbers.insert(2, 10)  # Inserts 10 at index 2
+numbers.extend([7,9,10])  #Inserts(extends) a new list to the existing one
+numbers + [10,20,30]      #Adds 2 or more list to form a single list.
 
 # Removing elements
 numbers.pop()  # Removes and returns the last element
+numbers.pop(3)  #Removes and returns the element on index 3
 numbers.remove(3)  # Removes the first occurrence of 3
+del numbers[1]   # Deletes element at index 1
 
 # Accessing elements
 first_element = numbers[0]  # Access the first element
 second_element = numbers[-1]  # Access the last element
+range_of_elements = numbers[0:5]   #Access a list of elements from index 0 then nth-1 index, in this case index 4.
+
+# Find Elements
+index_of_10 = numbers.index(10)  # Finds index of first occurrence of 10
+count_of_2 = numbers.count(2)  # Counts occurrences of 2
+
 
 # Initialize a list
 colors = ['red', 'green', 'blue']
@@ -302,38 +313,51 @@ all_colors = colors + more_colors  # Concatenates two lists
 first_two = colors[:2]  # Retrieves the first two elements
 last_two = colors[-2:]  # Retrieves the last two elements
 
+
 # Length of a list
 num_colors = len(colors)  # Returns the number of elements in the list
 
 # Sorting lists
 sorted_colors = sorted(colors)  # Returns a new list with elements sorted in ascending order
-colors.sort()  # Sorts the list in place
+colors.sort()  # Sorts the list in place, ie colors will have updated to a list of sorted elements
 
 # Reversing lists
 reversed_colors = list(reversed(colors))  # Returns a new list with elements in reversed order
 colors.reverse()  # Reverses the list in place
+colors.sort(reverse=True) # Sorts in descending order
+colors.reverse()  # Reverses the list
+
+
+#Copying a List
+
+new_color_list = colors.copy() # Creates a copy of the list
 
 # Clearing lists
 colors.clear()  # Removes all elements from the list
+```
 
+## Dictionary Operations
+
+```python
 
 # Define a dictionary
 person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Accessing values
-name = person['name']  # Access the value associated with the 'name' key
+name = person['name']  # Access the value associated with the 'name' key. 
 age = person.get('age')  # Access the value associated with the 'age' key using get method
 
-# Define a dictionary
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+### Get method doesnt return an error incase the given key does not exist. The first method does!
+
 
 # Adding or updating key-value pairs
-person['email'] = 'john@example.com'  # Adds a new key 'email' with value 'john@example.com'
-person.update({'age': 31, 'city': 'San Francisco'})  # Updates existing keys 'age' and 'city'
+person['email'] = 'john@example.com'  # Adds a new key 'email' with value 'john@example.com' or updates the existing email key with the new value.
+person.update({'age': 31, 'city': 'San Francisco'})  # Updates existing keys 'age' and 'city' or adds new keys and values.
 
 # Removing key-value pairs
 del person['city']  # Removes the key 'city' and its associated value
 age = person.pop('age')  # Removes the key 'age' and returns its associated value
+person.popitem()    #removes the last inserted item
 
 # Accessing keys and values
 keys = person.keys()  # Returns a view object of all keys in the dictionary
@@ -353,7 +377,15 @@ for value in person.values():
 
 for key, value in person.items():
     print(key, value)  # Prints each key-value pair in the dictionary
-``````
+
+# Copying a Dictionary
+new_person = person.copy()   #Creates a copy of the existing dictionary
+
+
+# Clearing a Dictionary
+person.clear()    #Clears the content of the dictionary
+```
+
 ## 2.4 Type Conversion and Type-checking
 Python allows you to convert between different data types and perform type-checking to ensure that a variable is of the expected type.
 
