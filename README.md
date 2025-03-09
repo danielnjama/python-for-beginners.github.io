@@ -14,7 +14,7 @@ Example: Python's simple and readable syntax:
 ```python
 #Hello World in Python
 print("Hello, World!")
-``````
+```
 
 ## 1.2 Installing Python and Setting up an IDE
 Installing Python is a straightforward process, and there are different methods depending on your operating system. Below are the general steps for installing Python on Windows, macOS, and Linux.
@@ -106,7 +106,7 @@ b = 10
 
 result = a + b
 print(result)
-``````
+```
 ## 1.4 Basic Syntax and Data Types
 Python supports various data types like integers, floats, strings, lists, dictionaries, and more. It also has simple and clear syntax rules.
 
@@ -135,7 +135,7 @@ eg: isPositive = True
 fruits = ('apple', 'banana', 'cherry')
 # Set (set):: Unordered collection of unique items, enclosed within curly braces or created using the set() function,
 nums = {1, 2, 3}
-``````
+```
 *Exercises/Projects:*
 
 1. Create a program that calculates the area of a rectangle and a circle. Ask the user for input and provide the results.
@@ -159,7 +159,7 @@ total_price = 100.0
 
 # Avoid
 x = 100.0
-``````
+```
 2. **Follow Naming Conventions:** Adhere to Python's naming conventions, such as using lowercase letters for variable names (snake_case), CamelCase for class names, and UPPERCASE_SNAKE_CASE for constants.
 ```python
 # Good
@@ -173,7 +173,7 @@ UserAge = 25
 class my_class:
     # Class definition
 pi = 3.14159
-``````
+```
 3. **Use Meaningful Names for Functions:** Function names should clearly describe what the function does. Avoid using single-letter or cryptic function names.
 ```python
 # Good
@@ -183,50 +183,50 @@ def calculate_area(length, width):
 # Avoid
 def f(x, y):
     # Function body
-``````
+```
 4. **Avoid Using Reserved Words:** Do not use Python's reserved words or keywords as variable names. Reserved words include if, for, while, and so on.
 ```python
 # Avoid
 if = 5
-``````
+```
 5. **Make Use of Comments:** If a variable name alone is not sufficient to explain its purpose, use comments to provide additional context.
 ```python
 total_cost = 100  # Total cost in dollars
-``````
+```
 6. **Avoid Single-Letter Variable Names:** Except for loop iterators (e.g., i, j, k), avoid using single-letter variable names. Single-letter variables are typically not descriptive.
 ```python
 # Avoid
 x = 10
 y = "Alice"
-``````
+```
 7. **Don't Use Meaningless Names:** Avoid using names that do not convey any meaning or context about the variable's purpose.
 ```python
 # Avoid
 temp = 42
 result = calculate()
-``````
+```
 8. **Avoid Excessive Abbreviations:** While concise names are good, excessive use of abbreviations can make your code less readable. Balance between brevity and clarity.
 ```python
 # Avoid
 usr_nm = "Alice"
-``````
+```
 9. **Don't Mix Different Naming Styles:** Stick to a consistent naming style throughout your code. Mixing styles can make your code inconsistent and harder to read
 ```python
 # Avoid
 userAge = 25
 total_cost = 100
-``````
+```
 10. **Don't Use Inconsistent Capitalization:** Variable names should not differ only in capitalization, as it can lead to confusion.
 ```python
 # Avoid
 myVariable = 42
 myvariable = "Hello"
-``````
+```
 12. **Don't Use Names That Clash with Built-in Functions:** Avoid naming variables with names that are already used as built-in functions or standard library functions. It can lead to unexpected behavior.
 ```python
 # Avoid
 sum = 10  # Overriding the built-in sum function
-``````
+```
 
 
 Example: Declaring and using variables with naming conventions:
@@ -235,7 +235,7 @@ Example: Declaring and using variables with naming conventions:
 my_variable = 42
 user_name = "Alice"
 _total_count = 100
-``````
+```
 ## 2.2 Numbers, Strings, Lists, Tuples, and Dictionaries
 Python supports various data structures, including:
 
@@ -401,16 +401,52 @@ if isinstance(num_str, str):
     print("It's a string.")
 else:
     print("It's not a string.")
-``````
-*Exercises/Projects:*
+```
+# Python Data Types Assignments
 
-1.  Define a variable user_input and ask the user for their name. Display a welcome message using their name.
-2.  Build a program that reads a list of numbers, calculates their mean, median, and mode, and displays the results.
-3.  Explain the difference between mutable and immutable data types in Python.
-4.  What are dictionary keys and values? How can you access and modify them?
-5.  Write a Python script that performs basic arithmetic operations (addition, subtraction, multiplication, division) using numeric variables.
-6.  Implement a Python dictionary to store the contact information (name, phone number, email) for your friends.
+## Assignment 1: List Operations
+### **Task 1: Basic List Operations**
+1. Create a list of 10 random numbers.
+2. Find the maximum and minimum numbers from the list.
+3. Sort the list in ascending and descending order.
+4. Remove duplicate numbers from the list.
+5. Write a program to merge two lists without duplicates.
+6. Calculates their mean, median, and mode, and displays the results.
 
+---
+
+## Assignment 2: Tuple Operations
+### **Task 2: Tuple Manipulation**
+1. Create a tuple with at least 5 elements.
+2. Convert the tuple into a list and add a new element.
+3. Convert the modified list back into a tuple.
+4. Write a program to check if a given element exists in a tuple.
+5. Count how many times an element appears in a tuple.
+
+---
+
+## Assignment 3: Dictionary Operations
+### **Task 3: Dictionary Manipulation**
+1. Create a dictionary with the following key-value pairs:
+   ```python
+   student = {"name": "John", "age": 20, "grade": "A", "subject": "Math"}
+   ```
+2. Add a new key-value pair (`"city": "New York"`) to the dictionary.
+3. Update the `"age"` key by increasing its value by 1.
+4. Remove the `"grade"` key from the dictionary.
+
+
+---
+
+## Assignment 4: String Manipulations
+### **Task 4: String Processing**
+1. Write a program to:
+   - Take a string as input and print it.
+   - Convert the string into **uppercase** and **lowercase**.
+   - Remove all spaces from the string.
+   - Replace all occurrences of `"Python"` with `"Java"` in a given string.(Identify any string and repalce its occurence with a string of choice)
+
+---
 
 
 
@@ -426,7 +462,7 @@ Example: Using if statements to check conditions:
 age = 18
 if age >= 18:
     print("You can vote.")
-``````
+```
 ## 3.2 Else and Elif Statements
 The else statement is used in combination with if to execute a block of code when the condition is false. The elif statement allows you to check multiple conditions sequentially.
 
@@ -440,7 +476,7 @@ elif temperature > 20:
     print("It's a pleasant day.")
 else:
     print("It's cold outside.")
-``````
+```
 ## 3.3 Loops (for, while)
 Loops in Python allow you to repeat a set of instructions. The for loop is used to iterate over a sequence, and the while loop continues execution as long as a condition is met.
 
@@ -459,7 +495,7 @@ count = 1
 while count <= 5:
     print(f"Count: {count}")
     count += 1
-``````
+```
 
 ## 3.4 Iterating through Lists and Dictionaries
 You can iterate through the elements of lists and key-value pairs of dictionaries using for loops.
@@ -478,7 +514,7 @@ person = {'name': 'Alice', 'age': 30}
 for key, value in person.items():
     print(f"{key}: {value}")
 
-``````
+```
 ## 3.5 Break and Continue Statements
 The break statement is used to exit a loop prematurely, and the continue statement is used to skip the rest of the current iteration and move to the next one.
 
@@ -499,7 +535,7 @@ for number in numbers:
     if number == 3:
         continue
     print(number)
-``````
+```
 *Exercises/Projects:*
 
 1. Write a program that checks if a given number is even or odd using conditional statements.
@@ -527,7 +563,7 @@ def greet(name):
 
 # Calling the function
 greet("Alice")
-``````
+```
 ## 4.2 Function Parameters and Return Values
 Functions can accept parameters (inputs) and return values (outputs). You can pass data into a function, and it can provide a result back.
 
@@ -540,7 +576,7 @@ def add(a, b):
 
 sum_result = add(5, 3)
 print(f"Sum: {sum_result}")
-``````
+```
 ## 4.3 Scope and Lifetime of Variables
 Variables can have different scopes, such as local and global. The scope of a variable determines where it can be accessed.
 
@@ -556,7 +592,7 @@ def my_function():
 
 my_function()
 print(global_var)  # Accessing the global variable outside the function
-``````
+```
 ## 4.4 Creating and Using Modules
 Python modules are files containing Python code that can be used in other Python programs. You can create your own modules and import them into your scripts.
 
@@ -578,7 +614,7 @@ OR
 
 from mymodule import greet
 greet('Bob')
-``````
+```
 *Exercises/Projects:*
 
 1. Write a Python function that calculates and returns the square of a given number.
@@ -586,10 +622,6 @@ greet('Bob')
 3. Write a function that takes two strings as input and returns a new string that concatenates the two inputs.
 4. Create a Python script that imports your custom module and uses its functions to perform calculations.
    
-
-
-
-
 
 
 # 5. File Handling
@@ -607,14 +639,14 @@ Reading a text file:
 with open("example.txt", "r") as file:
     content = file.read()
     print(content)
-``````
+```
 Writing to a text file:
 
 ```python
 # Open a file for writing
 with open("output.txt", "w") as file:
     file.write("This is a line of text.")
-``````
+```
 
 # 5.2 Working with Binary Files
 Binary files store data in a format that is not human-readable. You can work with binary files, such as images, audio, or data files, using Python.
@@ -628,7 +660,7 @@ with open("image.jpg", "rb") as binary_file:
 
 with open("new_image.jpg", "wb") as new_binary_file:
     new_binary_file.write(image_data)
-``````
+```
 
 ## 5.3 File Operations and Error Handling
 Python allows you to perform operations like renaming, deleting, or checking if a file exists. Additionally, error handling using try and except blocks is essential when working with files to handle exceptions.
@@ -654,7 +686,7 @@ try:
         content = file.read()
 except FileNotFoundError:
     print("File not found.")
-``````
+```
 ## 5.4 Using the with Statement (Context Managers)
 The with statement is used to ensure that a file is properly closed after usage. It simplifies file handling and eliminates the need to explicitly close files.
 
@@ -666,7 +698,7 @@ with open("example.txt", "r") as file:
     content = file.read()
     print(content)
 # File is automatically closed when exiting the `with` block
-``````
+```
 *Exercises/Projects:*
 
 1. Create a program that reads a text file, counts the number of words, and prints the result.
@@ -690,7 +722,7 @@ try:
     result = 10 / 0
 except ZeroDivisionError as e:
     print(f"Exception: {e}")
-``````
+```
 ## 6.2 Handling Exceptions (try, except, finally)
 Python provides a mechanism to handle exceptions using try, except, and optionally finally blocks. This allows you to gracefully handle errors and prevent program crashes.
 
@@ -704,7 +736,7 @@ except ZeroDivisionError as e:
     print(f"Exception: {e}")
 finally:
     print("Execution completed.")
-``````
+```
 # 6.3 Custom Exception Classes
 You can create custom exception classes to handle specific errors in your code. This allows you to provide more context and control over the exception handling.
 
@@ -719,7 +751,7 @@ try:
     raise CustomError("This is a custom exception.")
 except CustomError as e:
     print(f"Custom Exception: {e}")
-``````
+```
 
 # 6.4 Debugging Techniques
 Effective debugging techniques help identify and resolve issues in your code. Python provides tools like print statements, debugging modules, and IDEs with debugging support.
@@ -737,7 +769,7 @@ def divide(a, b):
     print(f"Result: {result}")
 
 divide(10, 0)
-``````
+```
 *Exercises/Projects:*
 
 1. Create a program that takes two numbers from the user and performs a division operation. Implement exception handling to handle division by zero.
@@ -784,7 +816,7 @@ print(random_sample)
 # Generate a random float within a specified range
 random_float = random.uniform(1.5, 2.5)
 print(random_float)
-``````
+```
 ## 7.2 Working with Built-in Modules (e.g., math, datetime)
 Python has several built-in modules for mathematical operations, date and time handling, and more. You can use these modules to simplify your code.
 
@@ -831,7 +863,7 @@ e_value = math.e
 # Get the current date and time
 current_time = datetime.datetime.now()
 print(current_time)
-``````
+```
 ## 7.3 Introduction to Third-Party Libraries (e.g., NumPy, pandas)
 Third-party libraries like NumPy, pandas, and many others provide specialized functionalities for data manipulation, scientific computing, and more. You can install and use these libraries in your projects.
 
@@ -849,7 +881,7 @@ array = np.array([1, 2, 3, 4, 5])
 data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
 df = pd.DataFrame(data)
 print(df)
-``````
+```
 ## 7.4 Creating and Importing Custom Modules
 You can create your own custom modules to organize and reuse your code. These modules can be imported and used in other Python scripts.
 
@@ -866,7 +898,7 @@ def greet(name):
 import my_module
 
 my_module.greet("Alice")
-``````
+```
 ## 7.5 Installing External Packages with pip
 Python's package manager, pip, allows you to easily install external packages and libraries from the Python Package Index (PyPI).
 
@@ -875,7 +907,7 @@ Example: Installing an external package with pip:
 ```bash
 # Install the requests library
 pip install requests
-``````
+```
 ## 7.6 Virtual Environments
 Using virtual environments is essential to manage dependencies and isolate packages for different projects.
 
@@ -893,7 +925,7 @@ myenv\Scripts\activate
 source myenv/bin/activate
 
 #Once activated, install the packages using pip
-``````
+```
 
 *Exercises/Projects:*
 
@@ -936,7 +968,7 @@ print("Parsed Datetime:", parsed_datetime)
 current_datetime = datetime.now()
 future_datetime = current_datetime + timedelta(days=7)
 print("Future Date:", future_datetime)
-``````
+```
 ## 8.2 Formatting and Parsing Dates
 You can format date and time objects into human-readable strings and parse strings to create date and time objects using format codes.
 
@@ -955,7 +987,7 @@ print(formatted_date)
 date_str = "2023-11-06 14:30:00"
 parsed_date = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
 print(parsed_date)
-``````
+```
 ## 8.3 Time Zones and Date Arithmetic
 Working with time zones and performing date arithmetic can be crucial for handling time-related data accurately.
 
@@ -973,7 +1005,7 @@ ny_time = datetime.now(tz)
 # Perform date arithmetic
 one_week_ago = ny_time - timedelta(weeks=1)
 print(f"One week ago: {one_week_ago}")
-``````
+```
 
 ## 8.4 Time module
 The time module in Python provides functions for working with time, independent of the date. Here are some common use cases and examples of how to use the time module:
@@ -1019,7 +1051,7 @@ end_process = time.process_time()
 print("Clock Time:", end_clock - start_clock, "seconds")
 print("Process Time:", end_process - start_process, "seconds")
 
-``````
+```
 *Exercises/Projects:*
 
 1. Create a Python script that calculates the number of days remaining until a specific date (e.g., a birthday) and displays it to the user.
