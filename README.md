@@ -679,16 +679,69 @@ for number in numbers:
         continue
     print(number)
 ```
-*Exercises/Projects:*
+## Exercise Questions
 
-1. Write a program that checks if a given number is even or odd using conditional statements.
-2. Create a script that prints the first 10 prime numbers.
-3. Create a script that determines whether a student has passed or failed an exam based on their score.
-4.  Develop a program that categorizes a given temperature as hot, moderate, or cold based on a user-defined threshold.
-5.  Create a Python program that uses a for loop to calculate the sum of numbers in a range.
-6.  Create a script that iterates through a dictionary of student names and their corresponding grades, displaying a message for each student's performance.
+### 1. Checking Even or Odd Number
+Write a Python program that checks if a given number is even or odd using conditional statements.
+
+**Example Input:**
+```python
+number = 7
+```
+**Expected Output:**
+```text
+7 is an odd number.
+```
+
+### 2. Print First 10 Prime Numbers
+Create a script that prints the first 10 prime numbers.
+
+**Expected Output:**
+```text
+2 3 5 7 11 13 17 19 23 29
+```
+
+### 3. Exam Pass or Fail
+Develop a script that determines whether a student has passed or failed an exam based on their score. Assume the passing mark is 50.
 
 
+### 4. Categorizing Temperature
+Create a program that categorizes a given temperature as `Hot`, `Moderate`, or `Cold` based on user-defined thresholds.
+
+
+### 5. Sum of Numbers in a Range
+Write a Python program that uses a `for` loop to calculate the sum of numbers in a given range.
+
+
+### 6. Iterating Through a Dictionary of Students
+Create a script that iterates through a dictionary of student names and their corresponding grades, displaying a message for each student's performance.
+
+**Example Dictionary:**
+```python
+students = {"Alice": 85, "Bob": 72, "Charlie": 90, "David": 45}
+```
+**Expected Output:**
+```text
+Alice: Excellent!
+Bob: Good job!
+Charlie: Outstanding!
+David: Needs Improvement.
+```
+
+## Additional Practice Questions
+
+### 7. Finding the Largest Number
+Write a program that takes three numbers as input and determines the largest using conditional statements.
+
+### 8. Number Guessing Game
+Create a simple number guessing game where the user has to guess a number between 1 and 20. Use a `while` loop to allow multiple attempts until the user guesses correctly.
+
+### 9. Multiplication Table
+Write a Python script that prints the multiplication table for a user-defined number up to 10.
+
+### 10. Using `break` and `continue`
+- Write a program that prints numbers from 1 to 10, but stops at 6 using the `break` statement.
+- Modify the program to skip even numbers using the `continue` statement.
 
 
 
