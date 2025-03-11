@@ -595,90 +595,133 @@ else:
 
 # 3.Control Flow and Conditionals
 
-## 3.1 If Statements
-Conditional statements allow you to make decisions in your code based on certain conditions. The if statement is used to execute a block of code when a condition is true.
+## Topics Covered
 
+### 3.1 If Statements
+The `if` statement is used to execute a block of code only if a specified condition is true.
 
-Example: Using if statements to check conditions:
-
+**Example:**
 ```python
 age = 18
 if age >= 18:
-    print("You can vote.")
+    print("You are eligible to vote.")
 ```
-## 3.2 Else and Elif Statements
-The else statement is used in combination with if to execute a block of code when the condition is false. The elif statement allows you to check multiple conditions sequentially.
 
-Example: Using else and elif statements:
+### 3.2 Else and Elif Statements
+The `else` statement provides an alternative execution path if the `if` condition is false. The `elif` statement allows checking multiple conditions.
 
+**Example:**
 ```python
-temperature = 25
-if temperature > 30:
-    print("It's hot outside.")
-elif temperature > 20:
-    print("It's a pleasant day.")
+score = 75
+if score >= 90:
+    print("Excellent")
+elif score >= 50:
+    print("Good job")
 else:
-    print("It's cold outside.")
+    print("Needs improvement")
 ```
-## 3.3 Loops (for, while)
-Loops in Python allow you to repeat a set of instructions. The for loop is used to iterate over a sequence, and the while loop continues execution as long as a condition is met.
 
+### 3.3 Loops (for, while)
+Loops allow repetitive execution of a block of code. The `for` loop is commonly used for iterating over sequences, while the `while` loop continues execution as long as a condition is true.
 
-
-Example: Using for and while loops:
-
+**Example (`for` loop):**
 ```python
-# Using a for loop
-fruits = ['apple', 'banana', 'cherry']
-for fruit in fruits:
-    print(fruit)
+for i in range(5):
+    print(i)
+```
 
-# Using a while loop
-count = 1
-while count <= 5:
-    print(f"Count: {count}")
+**Example (`while` loop):**
+```python
+count = 0
+while count < 5:
+    print(count)
     count += 1
 ```
 
-## 3.4 Iterating through Lists and Dictionaries
-You can iterate through the elements of lists and key-value pairs of dictionaries using for loops.
+### 3.4 Iterating through Lists and Dictionaries
+Lists and dictionaries can be iterated over using loops to process each element.
 
-
-Example: Iterating through a list and a dictionary:
-
+**Example (List):**
 ```python
-# Iterating through a list
-fruits = ['apple', 'banana', 'cherry']
+fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
-
-# Iterating through a dictionary
-person = {'name': 'Alice', 'age': 30}
-for key, value in person.items():
-    print(f"{key}: {value}")
-
 ```
-## 3.5 Break and Continue Statements
-The break statement is used to exit a loop prematurely, and the continue statement is used to skip the rest of the current iteration and move to the next one.
 
-
-Example: Using break and continue statements:
-
+**Example (Dictionary):**
 ```python
-# Using break to exit a loop
-numbers = [1, 2, 3, 4, 5]
-for number in numbers:
-    if number == 3:
-        break
-    print(number)
-
-# Using continue to skip an iteration
-numbers = [1, 2, 3, 4, 5]
-for number in numbers:
-    if number == 3:
-        continue
-    print(number)
+students = {"Alice": 85, "Bob": 72, "Charlie": 90}
+for name, grade in students.items():
+    print(f"{name}: {grade}")
 ```
+
+### 3.5 Break and Continue Statements
+The `break` statement exits a loop prematurely, while the `continue` statement skips the current iteration and moves to the next one.
+
+**Example (`break`):**
+```python
+for num in range(10):
+    if num == 5:
+        break
+    print(num)
+```
+
+**Example (`continue`):**
+```python
+for num in range(10):
+    if num % 2 == 0:
+        continue
+    print(num)
+```
+
+### 3.6 Nested Conditionals
+A conditional statement inside another conditional statement is called a nested conditional.
+
+**Example:**
+```python
+age = 20
+if age >= 18:
+    if age >= 65:
+        print("You are a senior citizen.")
+    else:
+        print("You are an adult.")
+```
+
+### 3.7 Logical Operators (`and`, `or`, `not`)
+Logical operators are used to combine multiple conditions.
+
+**Example:**
+```python
+age = 25
+has_id = True
+if age >= 18 and has_id:
+    print("You can enter the club.")
+```
+
+### 3.8 Loop Control Statements (`pass` statement)
+The `pass` statement is used when a statement is required syntactically but no code needs to be executed.
+
+**Example:**
+```python
+for num in range(5):
+    if num == 3:
+        pass  # Placeholder for future code
+    print(num)
+```
+
+### 3.9 Using `else` with Loops
+The `else` block executes after the loop finishes, unless the loop is exited with `break`.
+
+**Example:**
+```python
+for num in range(5):
+    print(num)
+else:
+    print("Loop completed successfully.")
+```
+
+
+
 ## Exercise Questions
 
 ### 1. Checking Even or Odd Number
