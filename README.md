@@ -597,6 +597,18 @@ else:
 
 ## Topics Covered
 
+### 3.0 Comparison and Relational Operators
+Before diving into conditionals, it's important to understand comparison and relational operators. These operators are used to compare values and return `True` or `False` based on the condition.
+
+| Operator | Description | Example | Output |
+|----------|-------------|---------|--------|
+| `==` | Equal to | `5 == 5` | `True` |
+| `!=` | Not equal to | `5 != 3` | `True` |
+| `>` | Greater than | `7 > 4` | `True` |
+| `<` | Less than | `3 < 8` | `True` |
+| `>=` | Greater than or equal to | `6 >= 6` | `True` |
+| `<=` | Less than or equal to | `2 <= 5` | `True` |
+
 ### 3.1 If Statements
 The `if` statement is used to execute a block of code only if a specified condition is true.
 

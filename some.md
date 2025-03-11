@@ -2,6 +2,17 @@
 
 ## Topics Covered
 
+
+
+**Example:**
+```python
+age = 20
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+```
+
 ### 3.1 If Statements
 The `if` statement is used to execute a block of code only if a specified condition is true.
 
@@ -125,4 +136,80 @@ else:
     print("Loop completed successfully.")
 ```
 
+## Exercise Questions
+
+### 1. Checking Even or Odd Number
+Write a Python program that checks if a given number is even or odd using conditional statements.
+
+**Example Input:**
+```python
+number = 7
+```
+**Expected Output:**
+```text
+7 is an odd number.
+```
+
+### 2. Print First 10 Prime Numbers
+Create a script that prints the first 10 prime numbers.
+
+**Expected Output:**
+```text
+2 3 5 7 11 13 17 19 23 29
+```
+
+### 3. Exam Pass or Fail
+Develop a script that determines whether a student has passed or failed an exam based on their score. Assume the passing mark is 50.
+
+**Example Input:**
+```python
+score = 67
+```
+**Expected Output:**
+```text
+Congratulations! You have passed the exam.
+```
+
+### 4. Categorizing Temperature
+Create a program that categorizes a given temperature as `Hot`, `Moderate`, or `Cold` based on user-defined thresholds.
+
+**Example Input:**
+```python
+temperature = 18  # Assume threshold: Cold < 15, Moderate 15-25, Hot > 25
+```
+**Expected Output:**
+```text
+The temperature is Moderate.
+```
+
+### 5. Sum of Numbers in a Range
+Write a Python program that uses a `for` loop to calculate the sum of numbers in a given range.
+
+**Example Input:**
+```python
+start = 1
+end = 10
+```
+**Expected Output:**
+```text
+Sum of numbers from 1 to 10 is 55.
+```
+
+### 6. Iterating Through a Dictionary of Students
+Create a script that iterates through a dictionary of student names and their corresponding grades, displaying a message for each student's performance.
+
+**Example Dictionary:**
+```python
+students = {"Alice": 85, "Bob": 72, "Charlie": 90, "David": 45}
+```
+**Expected Output:**
+```text
+Alice: Excellent!
+Bob: Good job!
+Charlie: Outstanding!
+David: Needs Improvement.
+```
+
+---
+These exercises will help reinforce the concepts of control flow and conditional statements in Python. Happy coding!
 
