@@ -895,10 +895,6 @@ greet('Bob')
 ---
 
 
-
-   
-
-
 # 5. File Handling
 
 ## 5.1 Reading and Writing Text Files
@@ -918,10 +914,31 @@ with open("example.txt", "r") as file:
 Writing to a text file:
 
 ```python
-# Open a file for writing
+# Open a file for writing. This overwrites all the content!
 with open("output.txt", "w") as file:
     file.write("This is a line of text.")
 ```
+
+### Append Mode ("a"):
+This mode adds new content to the end of the file without deleting existing data.
+```python
+with open("output.txt", "a") as file:
+    file.write("\nThis is a new line of text.")
+
+```
+### Read and Write Mode ("r+")
+This allows reading and writing without deleting existing content. You can control the file pointer to modify specific parts.
+```python
+with open("output.txt", "r+") as file:
+    content = file.read()  # Read existing content
+    file.seek(0, 2)  # Move to end of file
+    file.write("\nAppending with r+ mode.")
+```
+
+
+
+
+
 
 # 5.2 Working with Binary Files
 Binary files store data in a format that is not human-readable. You can work with binary files, such as images, audio, or data files, using Python.
@@ -1333,3 +1350,209 @@ print("Process Time:", end_process - start_process, "seconds")
 2. Write a program that converts between different time zones. Allow the user to input a date and time, and then convert it to another time zone.
 3. Build a simple world clock application that displays the current time.
 4. Create a script that calculates the difference in hours and minutes between two timestamps (e.g., for tracking meeting durations).
+
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+# Python Practice Exercises
+
+## 1. Python Basics
+
+### 1.1 Python Syntax and Comments
+1. Write a Python program to print "Hello, World!".
+2. Add a comment to the above program explaining what it does.
+
+### 1.2 Variables and Data Types
+3. Create a variable `name` and assign your name to it. Print the variable.
+4. Create variables `a`, `b`, and `c` with values 10, 20.5, and "Python" respectively. Print their types using `type()`.
+
+### 1.3 Numbers
+5. Write a program to add two integers and print the result.
+6. Write a program to multiply a float and an integer, then print the result.
+
+### 1.4 Strings
+7. Create a string `s = "Python"` and print its length using `len()`.
+8. Concatenate two strings `s1 = "Hello"` and `s2 = "World"` and print the result.
+
+### 1.5 Booleans
+9. Create two variables `x = True` and `y = False`. Print the result of `x and y`.
+10. Print the result of `not x`.
+
+### 1.6 Basic Input and Output
+11. Write a program that takes user input for their name and prints "Hello, [Name]!".
+12. Write a program that takes two numbers as input and prints their sum.
+
+### 1.7 Type Conversion
+13. Convert the string `"123"` to an integer and print it.
+14. Convert the integer `456` to a string and print it.
+
+---
+
+## 2. Operators in Python
+
+### 2.1 Arithmetic Operators
+15. Write a program to calculate the remainder when 15 is divided by 4 using the modulus operator.
+16. Write a program to calculate the square of a number using the exponentiation operator.
+
+### 2.2 Comparison Operators
+17. Compare two numbers `a = 10` and `b = 20` using the `>` operator and print the result.
+18. Check if two strings `s1 = "Python"` and `s2 = "python"` are equal (case-sensitive).
+
+### 2.3 Assignment Operators
+19. Use the `+=` operator to add 5 to a variable `x = 10` and print the result.
+20. Use the `*=` operator to multiply a variable `y = 3` by 4 and print the result.
+
+### 2.4 Logical Operators
+21. Check if `a = 10` is greater than 5 and less than 20 using logical operators.
+22. Check if `b = 0` is not equal to 1 or greater than -1.
+
+### 2.5 Membership and Identity Operators
+23. Check if the letter `'a'` is in the string `"Python"` using the `in` operator.
+24. Check if two variables `x = [1, 2, 3]` and `y = [1, 2, 3]` are the same object using the `is` operator.
+
+---
+
+## 3. Control Flow
+
+### 3.1 Conditional Statements
+25. Write a program to check if a number is positive, negative, or zero.
+26. Write a program to check if a year is a leap year.
+
+### 3.2 Loops
+27. Write a `for` loop to print numbers from 1 to 10.
+28. Write a `while` loop to print numbers from 10 to 1.
+
+### 3.3 Using `break` and `continue`
+29. Write a program to print numbers from 1 to 10 but skip the number 5 using `continue`.
+30. Write a program to stop printing numbers when reaching 7 using `break`.
+
+### 3.4 Nested Loops and Conditional Statements
+31. Write a program to print a multiplication table for numbers 1 to 5 using nested loops.
+32. Write a program to find all prime numbers between 1 and 50.
+
+---
+
+## 4. Data Structures in Python
+
+### 4.1 Lists
+33. Create a list `numbers = [1, 2, 3, 4, 5]` and print the second element.
+34. Add the number 6 to the end of the list `numbers` and print the updated list.
+
+### 4.2 Tuples
+35. Create a tuple `t = (1, 2, 3)` and try to change its second element to 5. Observe the result.
+36. Convert the tuple `t` to a list and print it.
+
+### 4.3 Dictionaries
+37. Create a dictionary `student = {"name": "John", "age": 21}` and print the value of the key `"age"`.
+38. Add a new key-value pair `"grade": "A"` to the dictionary `student` and print the updated dictionary.
+
+### 4.4 Working with Strings
+39. Convert the string `"Hello World"` to uppercase using `.upper()`.
+40. Replace the word `"World"` with `"Python"` in the string `"Hello World"`.
+
+---
+
+## 5. Functions in Python
+
+### 5.1 Defining Functions
+41. Write a function `greet()` that prints "Hello, World!".
+42. Write a function `add(a, b)` that returns the sum of two numbers.
+
+### 5.2 Function Parameters and Arguments
+43. Write a function `multiply(a, b=2)` that multiplies two numbers, with `b` having a default value of 2.
+44. Write a function `power(x, y)` that returns `x` raised to the power of `y`.
+
+### 5.3 Return Values
+45. Write a function `is_even(n)` that returns `True` if `n` is even, otherwise `False`.
+46. Write a function `factorial(n)` that returns the factorial of `n`.
+
+---
+
+## 6. Error and Exception Handling
+
+### 6.1 Using `try`, `except`, and `finally`
+47. Write a program to handle a `ZeroDivisionError` when dividing by zero.
+48. Write a program to handle a `ValueError` when converting a string to an integer.
+
+### 6.2 Raising Exceptions
+49. Write a function `check_positive(n)` that raises a `ValueError` if `n` is negative.
+50. Write a program to catch a custom exception and print a message.
+
+---
+
+## 7. Working with Files
+
+### 7.1 Reading from a File
+51. Write a program to read a file `example.txt` and print its contents.
+52. Write a program to count the number of lines in a file.
+
+### 7.2 Writing to a File
+53. Write a program to write "Hello, File!" to a file `output.txt`.
+54. Write a program to append "New Line" to an existing file `output.txt`.
+
+### 7.3 File Modes and Exceptions
+55. Write a program to handle a `FileNotFoundError` when trying to open a non-existent file.
+56. Write a program to read a file in binary mode and print its contents.
+
+---
+
+## 8. Python Modules and Packages
+
+### 8.1 Importing Modules
+57. Write a program to use the `math` module to calculate the square root of 16.
+58. Write a program to use the `random` module to generate a random number between 1 and 10.
+
+### 8.2 Creating and Using Custom Modules
+59. Create a custom module `mymodule.py` with a function `greet()` that prints "Hello from mymodule!". Import and use it in another program.
+60. Write a program to install and use an external library like `requests` using `pip`.
+
+---
+
+## Mixed Challenges
+61. Write a program to reverse a string without using built-in functions.
+62. Write a program to find the largest number in a list.
+63. Write a program to count the frequency of each element in a list.
+64. Write a program to check if a string is a palindrome.
+65. Write a program to sort a dictionary by its values.
+66. Write a program to merge two dictionaries.
+67. Write a program to find the second largest number in a list.
+68. Write a program to remove duplicates from a list.
+69. Write a program to find the common elements between two lists.
+70. Write a program to calculate the sum of digits of a number.
+71. Write a program to check if a number is an Armstrong number.
+72. Write a program to generate the Fibonacci sequence up to `n` terms.
+73. Write a program to find the factorial of a number using recursion.
+74. Write a program to flatten a nested list.
+75. Write a program to find the longest word in a sentence.
+76. Write a program to count the number of vowels in a string.
+77. Write a program to check if two strings are anagrams.
+78. Write a program to find the intersection of two sets.
+79. Write a program to find the union of two sets.
+80. Write a program to find the difference between two sets.
+81. Write a program to check if a number is a perfect number.
+82. Write a program to find the GCD of two numbers.
+83. Write a program to find the LCM of two numbers.
+84. Write a program to convert a decimal number to binary.
+85. Write a program to convert a binary number to decimal.
+86. Write a program to check if a number is a prime number.
+87. Write a program to find the sum of all prime numbers between 1 and 100.
+88. Write a program to find the sum of all even numbers in a list.
+89. Write a program to find the sum of all odd numbers in a list.
+90. Write a program to find the average of numbers in a list.
+91. Write a program to find the median of numbers in a list.
+92. Write a program to find the mode of numbers in a list.
+93. Write a program to find the standard deviation of numbers in a list.
+94. Write a program to find the variance of numbers in a list.
+95. Write a program to find the correlation coefficient between two lists.
+96. Write a program to find the covariance between two lists.
+97. Write a program to find the Pearson correlation coefficient between two lists.
+98. Write a program to find the Spearman correlation coefficient between two lists.
+99. Write a program to find the Kendall correlation coefficient between two lists.
+100. Write a program to find the rank of a matrix.
