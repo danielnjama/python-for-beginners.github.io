@@ -809,6 +809,15 @@ Functions are reusable blocks of code that perform specific tasks. You can defin
 Example: Defining and calling a function:
 
 ```python
+#Without a parameter
+def greetings():
+    print("Hello there")
+
+# Calling the function
+greetings()
+
+
+#with a parameter
 def greet(name):
     print(f"Hello, {name}!")
 
