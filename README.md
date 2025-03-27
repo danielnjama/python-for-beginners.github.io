@@ -1197,11 +1197,11 @@ In Python, **exceptions** are events that occur during the execution of a progra
 ### Common Built-in Exceptions
 - `ZeroDivisionError`: Raised when dividing by zero.
 ```python
- eg: Divide any number by 0::  10/0
+ print(10/0)
  ```
 - `TypeError`: Raised when an operation is performed on an inappropriate type.
 ```python
-eg: 'a' + 3
+print('a' + 3)
 ```
 - `ValueError`: Raised when a function receives an argument of the correct type but an inappropriate value.
 ```python
@@ -1212,15 +1212,17 @@ converttoint('name')
 ```
 - `FileNotFoundError`: Raised when a file or directory is not found.
 ```python
-eg: os.listdir('non-existing-path')
+import os
+os.listdir('non-existing-path')
 ```
 - `IndexError`: Raised when an index is out of range.
 ```python
-eg: x = [2,4]  then print(x[5])
+x = [2,4]
+print(x[5])
 ```
 - `KeyError`: Raised when a dictionary key is not found.
 ```python
-eg: person = {'name': 'ken'}
+person = {'name': 'ken'}
 print(person['age'])
 ```
 
