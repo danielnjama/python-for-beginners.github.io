@@ -1196,11 +1196,33 @@ In Python, **exceptions** are events that occur during the execution of a progra
 
 ### Common Built-in Exceptions
 - `ZeroDivisionError`: Raised when dividing by zero.
+```python
+ eg: Divide any number by 0::  10/0
+ ```
 - `TypeError`: Raised when an operation is performed on an inappropriate type.
+```python
+eg: 'a' + 3
+```
 - `ValueError`: Raised when a function receives an argument of the correct type but an inappropriate value.
+```python
+def converttoint(num):
+    print(int(num))
+
+converttoint('name')
+```
 - `FileNotFoundError`: Raised when a file or directory is not found.
+```python
+eg: os.listdir('non-existing-path')
+```
 - `IndexError`: Raised when an index is out of range.
+```python
+eg: x = [2,4]  then print(x[5])
+```
 - `KeyError`: Raised when a dictionary key is not found.
+```python
+eg: person = {'name': 'ken'}
+print(person['age'])
+```
 
 ### Example: Understanding Exceptions
 
@@ -1245,6 +1267,22 @@ class CustomError(Exception):
 try:
     raise CustomError("This is a custom exception.")
 except CustomError as e:
+    print(f"Custom Exception: {e}")
+
+---
+def withdraw(balance, amount):
+    if amount > balance:
+        raise InsufficientFundsError("Withdrawal amount exceeds account balance.")
+    balance -= amount
+    return balance
+
+# Simulating a withdrawal
+try:
+    account_balance = 1000  # User has $1000
+    withdrawal_amount = 1500  # Trying to withdraw $1500
+    new_balance = withdraw(account_balance, withdrawal_amount)
+    print(f"New balance: ${new_balance}")
+except InsufficientFundsError as e:
     print(f"Custom Exception: {e}")
 ```
 
