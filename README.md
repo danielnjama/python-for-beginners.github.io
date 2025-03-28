@@ -1272,6 +1272,10 @@ except CustomError as e:
     print(f"Custom Exception: {e}")
 
 ---
+class InsufficientFundsError(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+
 def withdraw(balance, amount):
     if amount > balance:
         raise InsufficientFundsError("Withdrawal amount exceeds account balance.")
