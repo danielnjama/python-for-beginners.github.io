@@ -1,0 +1,62 @@
+## Python Course Summary
+
+### 1. Introduction to Python
+By the end of this topic, students should be able to:
+- Understand what Python is and why it is widely used.
+- Install Python on their system.
+- Run Python programs using the terminal and scripts.
+- Write basic Python statements and comments.
+
+### 2. Variables and Data Types
+By the end of this topic, students should be able to:
+- Declare and initialize variables in Python.
+- Understand different data types such as integers, floats, strings, lists, tuples, dictionaries, and sets.
+- Perform type conversion between different data types.
+- Use basic operations on different data types.
+
+### 3. Control Flow and Conditionals
+By the end of this topic, students should be able to:
+- Use `if`, `elif`, and `else` statements for decision-making.
+- Implement loops (`for` and `while`) to execute repetitive tasks.
+- Use `break` and `continue` statements to control loop execution.
+- Write logical conditions using comparison and logical operators.
+
+### 4. Functions and Modules
+By the end of this topic, students should be able to:
+- Define and call functions in Python.
+- Pass arguments and return values in functions.
+- Understand variable scope (local and global variables).
+- Create and use Python modules for better code organization.
+- Import built-in and custom modules into Python scripts.
+
+### 5. File Handling
+By the end of this topic, students should be able to:
+- Open and read files using Python.
+- Write and append data to files.
+- Handle different file modes (`r`, `w`, `a`, `r+`).
+- Work with file paths and directories.
+- Use the `with` statement to handle files safely.
+
+### 6. Exception Handling
+By the end of this topic, students should be able to:
+- Understand the importance of handling errors.
+- Use `try`, `except`, `else`, and `finally` blocks for error handling.
+- Handle common Python exceptions (e.g., `ZeroDivisionError`, `FileNotFoundError`).
+- Raise custom exceptions in Python programs.
+
+### 7. Python Libraries and Modules
+By the end of this topic, students should be able to:
+- Understand what Python libraries and modules are.
+- Install and use external libraries with `pip`.
+- Work with popular libraries such as `math`, `random`, and `os`.
+- Explore how libraries help in extending Python’s functionality.
+
+### 8. Date and Time
+By the end of this topic, students should be able to:
+- Work with the `datetime` module to get the current date and time.
+- Format dates and times using `strftime()`.
+- Perform date arithmetic (adding and subtracting dates/times).
+- Convert strings to date objects and vice versa.
+
+---
+
