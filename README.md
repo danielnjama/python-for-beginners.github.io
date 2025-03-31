@@ -89,65 +89,122 @@ print("Hello from Python!")
 
 # Run the script
 python hello.py
-````
+```
+# Python Basics
+
 ## 1.3 Running Python Programs
-Python programs can be executed in different ways, including the command line and using an IDE.
+Python programs can be executed in multiple ways, including interactive mode and script execution.
 
-Example: Running a Python program on the command line. There are 2 ways to achieve this:
-1. Launch the Python interpreter application. This provides an interface where you can write Python codes.
-2. Launch your computer's command prompt/terminal and type in python3 or just python and press enter.
+### 1.3.1 Running Python in Interactive Mode
+Interactive mode allows you to execute Python commands one by one in real-time.
 
-   Then input the commands as below. 
+#### **Steps to Run Python in Interactive Mode**
+1. Open your terminal or command prompt.
+2. Type `python` (or `python3` on some systems) and press **Enter**.
+3. You will see the Python prompt (`>>>`), indicating Python is ready for input.
+4. Type Python commands directly and press **Enter** to execute them.
 
+#### **Example:**
+```python
+>>> a = 5
+>>> b = 10
+>>> result = a + b
+>>> print(result)
+15
+```
+To exit interactive mode, type:
+```python
+>>> exit()
+```
+or press **Ctrl + Z** (Windows) or **Ctrl + D** (Mac/Linux).
+
+---
+
+### 1.3.2 Running Python Scripts
+Python scripts (files ending with `.py`) can be executed using the terminal or command prompt.
+
+#### **Steps to Run a Python Script**
+1. Open a text editor (VS Code, Notepad++, PyCharm, etc.).
+2. Write your Python code and save it as `script.py`.
+3. Open the terminal or command prompt.
+4. Navigate to the script’s directory using `cd` (change directory).
+5. Run the script using:
+   ```sh
+   python script.py
+   ```
+   or
+   ```sh
+   python3 script.py
+   ```
+
+#### **Example:**
+Create a Python file (`addition.py`) with the following content:
 ```python
 a = 5
-
 b = 10
-
 result = a + b
-print(result)
+print("The sum is:", result)
 ```
-## 1.4 Basic Syntax and Data Types
-Python supports various data types like integers, floats, strings, lists, dictionaries, and more. It also has simple and clear syntax rules.
-
-Example: Working with basic data types:
-
-```Python
-# Integer('int'):: Whole numbers without any decimal point
-age = 25
-
-# Float('float'):: Numbers with a decimal point or in exponential form like 3.14, -0.001, 2.5e2
-price = 19.99
-
-# String('str')::A sequence of characters enclosed within single, double, or triple quotes
-name = "John Doe"
-
-# List('list')::Ordered collection of items, mutable(can be modified after creation) and enclosed within square brackets
-fruits = ['apple', 'banana', 'cherry']
-
-# Dictionary('dict')::Collection of key-value pairs, enclosed within curly braces
-person = {'name': 'Alice', 'age': 30}
-
-# Boolean
-This takes True or False
-eg: isPositive = True
-# Tuple (tuple): Similar to lists but immutable( can't be modified after creation), enclosed within parentheses
-fruits = ('apple', 'banana', 'cherry')
-# Set (set):: Unordered collection of unique items, enclosed within curly braces or created using the set() function,
-nums = {1, 2, 3}
+Run it in the terminal:
+```sh
+python addition.py
 ```
-*Exercises/Projects:*
+**Output:**
+```
+The sum is: 15
+```
 
-1. Create a program that calculates the area of a rectangle and a circle. Ask the user for input and provide the results.
-2. Write a simple Python program that prints "Hello, World!" to the console. Run the program and verify that it works as expected.
-3. Write a Python program that converts temperatures between Celsius and Fahrenheit. Allow the user to input the temperature and the scale they are using (C or F), and then perform the conversion.
-4. Build a simple calculator application in Python that can perform basic arithmetic operations (addition, subtraction, multiplication, division) based on user input. Ensure that the application handles user errors gracefully.
+---
+
+## 1.4 Basic Syntax
+Python has a simple and readable syntax, making it easy to learn.
+
+### **1.4.1 Syntax Rules**
+- **Case-Sensitive:** `age` and `Age` are different variables.
+- **Indentation:** Python uses indentation (spaces or tabs) to define code blocks.
+- **Comments:** Use `#` for single-line comments and triple quotes (`""" """` or `''' '''`) for multi-line comments.
+
+#### **Example:**
+```python
+# This is a single-line comment
+
+"""
+This is a multi-line comment.
+It can span multiple lines.
+"""
+
+age = 25  # Variable assignment
+if age > 18:
+    print("You are an adult")  # Indentation is required
+```
+
+---
+
+## **Practice Questions**
+### **1. Running Python**
+1. How do you start Python in interactive mode?
+2. How do you run a Python script named `hello.py` from the terminal?
+3. What command is used to exit Python interactive mode?
+
+### **2. Basic Syntax**
+4. Identify the error in the following code and fix it:
+   ```python
+   if 5 > 3:
+   print("Five is greater than three")
+   ```
+5. What will be the output of the following code?
+   ```python
+   name = "Alice"
+   age = 25
+   print("My name is" + name + "and I am" + age + "years old.")
+   ```
+6. What will happen if you don’t use indentation correctly in Python?
+
+---
 
 
 
-
-
-# 2.Variables and Data Structures
+# 2.Variables and Data Types
 
 ## 2.1 Variables and Naming Conventions
 In Python, variables are used to store data. They must follow certain naming conventions, such as starting with a letter or underscore and consisting of letters, digits, and underscores.
