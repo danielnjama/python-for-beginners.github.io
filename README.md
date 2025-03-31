@@ -1416,7 +1416,7 @@ divide(10, 0)
 
 ---
 
-# 7. Working with Python Libraries and Modules
+# 7. Python Libraries and Modules
 
 Python’s extensive ecosystem of libraries and modules is one of its greatest strengths. Libraries and modules allow you to reuse code, simplify complex tasks, and extend Python’s functionality. This section covers standard libraries, built-in modules, third-party libraries, custom modules, and tools like `pip` and virtual environments.
 
@@ -1635,7 +1635,7 @@ pip install numpy pandas
 ---
 
 
-# 8. Working with Dates and Times
+# 8. Date and Time
 
 Python provides powerful tools for working with dates and times through its `datetime` and `time` modules. These modules allow you to create, manipulate, format, and perform arithmetic operations on dates and times. This section covers the basics of working with dates and times, including time zones and practical examples.
 
