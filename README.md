@@ -260,6 +260,11 @@ def f(x, y):
 # Avoid
 if = 5
 ```
+To get a list of reserved keywords:
+```bash
+import keyword
+print(keyword.kwlist)
+```
 5. **Make Use of Comments:** If a variable name alone is not sufficient to explain its purpose, use comments to provide additional context.
 ```python
 total_cost = 100  # Total cost in dollars
