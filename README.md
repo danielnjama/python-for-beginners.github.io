@@ -312,6 +312,15 @@ my_variable = 42
 user_name = "Alice"
 _total_count = 100
 ```
+
+13. **Don't Use Spaces in Variable Names:** Variable names cannot contain spaces. Instead, use underscores (_) to separate words.
+```
+Example: Use student_name instead of student name.
+```
+14. **Don't Start Variable Names with Numbers:** Variable names must begin with a letter (a–z, A–Z) or an underscore (_). Starting with a number will cause a syntax error.
+```
+Example: Use score1, not 1score.
+```
 ## 2.2 Numbers, Strings, Lists, Tuples, and Dictionaries
 Python supports various data structures, including:
 
