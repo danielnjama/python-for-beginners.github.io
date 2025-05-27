@@ -1113,22 +1113,22 @@ greet('Bob')
 
 
 ## 4.2 Function Parameters and Return Values
-5. Develop a function that calculates the area of a rectangle, allowing users to specify the length and width as parameters.
-6. Write a function that accepts a temperature in Celsius and returns the equivalent temperature in Fahrenheit.
-7. Develop a function that takes a list of numbers and returns the maximum value in the list.
-8. Create a function that accepts a string and a number `n`, and returns the string repeated `n` times.
-9. Write a function that takes two strings as input and returns a new string that concatenates the two inputs.
+4. Develop a function that calculates the area of a rectangle, allowing users to specify the length and width as parameters.
+5. Write a function that accepts a temperature in Celsius and returns the equivalent temperature in Fahrenheit.
+6. Develop a function that takes a list of numbers and returns the maximum value in the list.
+7. Create a function that accepts a string and a number `n`, and returns the string repeated `n` times.
+8. Write a function that takes two strings as input and returns a new string that concatenates the two inputs.
 
 ## 4.3 Scope and Lifetime of Variables
-10. Define a function where a local variable has the same name as a global variable and demonstrate their differences.
-11. Write a function that modifies a global variable inside it using the `global` keyword.
-12. Create a function that uses a nested function to access a variable defined in the outer function (closure concept).
+9. Define a function where a local variable has the same name as a global variable and demonstrate their differences.
+10. Write a function that modifies a global variable inside it using the `global` keyword.
+11. Create a function that uses a nested function to access a variable defined in the outer function (closure concept).
 
 ## 4.4 Creating and Using Modules
-13. Create a Python script that imports your custom module and uses its functions to perform calculations.
-14. Create a Python module (`math_operations.py`) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
-15. Write a module that contains a function to check if a number is prime. Import and use this module in another script.
-16. Develop a module (`greetings.py`) that defines a function to greet users based on the time of day (morning, afternoon, evening). Import and test it in a separate script.
+12. Create a Python script that imports your custom module and uses its functions to perform calculations.
+13. Create a Python module (`math_operations.py`) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
+14. Write a module that contains a function to check if a number is prime. Import and use this module in another script.
+15. Develop a module (`greetings.py`) that defines a function to greet users based on the time of day (morning, afternoon, evening). Import and test it in a separate script.
 
 
 ---
