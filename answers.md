@@ -547,6 +547,158 @@ print(greetings.greet_by_time(20))  # Good evening!
 
 
 # 5. File Handling
+**Q: Word Counter: Create a program that reads a text file, counts the number of words, and prints the result.**
+
+```python
+with open('sample.txt', 'r') as file:
+    text = file.read()
+    words = text.split()
+    print("Word count:", len(words))
+```
+
+**Q: File Copy: Write a script that copies the content of one text file into another file, ensuring that the original file remains unchanged.**
+
+```python
+with open('original.txt', 'r') as original:
+    content = original.read()
+
+with open('copy.txt', 'w') as copy:
+    copy.write(content)
+```
+
+**Q: File Renamer: Develop a program that renames a file based on user input.**
+
+```python
+import os
+old_name = input("Enter the current file name: ")
+new_name = input("Enter the new file name: ")
+os.rename(old_name, new_name)
+```
+
+**Q: Text Search: Build a program that searches for specific words in a text file and displays line numbers where they occur.**
+
+```python
+word = input("Enter word to search: ")
+with open('sample.txt', 'r') as file:
+    for number, line in enumerate(file, 1):
+        if word in line:
+            print(f"Found in line {number}: {line.strip()}")
+```
+
+**Q: File Management System: Allows users to add, delete, and list files in a specific directory.**
+
+```python
+import os
+
+def add_file(filename):
+    with open(filename, 'w') as f:
+        f.write('')
+
+def delete_file(filename):
+    os.remove(filename)
+
+def list_files():
+    print(os.listdir())
+```
+
+**Q: Log File Analyzer: Reads a log file, extracts error messages, and writes them to a separate file.**
+
+```python
+with open('log.txt', 'r') as log, open('errors.txt', 'w') as errors:
+    for line in log:
+        if 'ERROR' in line:
+            errors.write(line)
+```
+
+**Q: CSV File Reader: Reads a CSV file and displays its content.**
+
+```python
+import csv
+with open('data.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    for row in reader:
+        print(', '.join(row))
+```
+
+**Q: File Encryption: Encrypts file content using a character shift.**
+
+```python
+shift = 3
+with open('plain.txt', 'r') as infile, open('encrypted.txt', 'w') as outfile:
+    for line in infile:
+        encrypted = ''.join(chr(ord(char) + shift) for char in line)
+        outfile.write(encrypted)
+```
+
+**Q: File Backup Utility: Copies all files from one directory to another.**
+
+```python
+import shutil, os
+source = 'original_dir'
+destination = 'backup_dir'
+os.makedirs(destination, exist_ok=True)
+for file_name in os.listdir(source):
+    full_file_name = os.path.join(source, file_name)
+    if os.path.isfile(full_file_name):
+        shutil.copy(full_file_name, destination)
+```
+
+**Q: File Metadata Extractor: Displays file size and creation date.**
+
+```python
+import os, time
+for file in os.listdir('.'):
+    if os.path.isfile(file):
+        print(f"{file}: Size={os.path.getsize(file)} bytes, Created={time.ctime(os.path.getctime(file))}")
+```
+
+**Q: File Splitter: Splits a large file into smaller ones by line count.**
+
+```python
+def split_file(filename, lines_per_file):
+    with open(filename) as f:
+        lines = f.readlines()
+    for i in range(0, len(lines), lines_per_file):
+        with open(f'part_{i//lines_per_file}.txt', 'w') as f_out:
+            f_out.writelines(lines[i:i+lines_per_file])
+```
+
+**Q: File Merger: Merges multiple text files into one.**
+
+```python
+with open('merged.txt', 'w') as outfile:
+    for fname in ['file1.txt', 'file2.txt']:
+        with open(fname) as infile:
+            outfile.write(infile.read() + '\n')
+```
+
+**Q: File Compression: Removes extra spaces and newlines.**
+
+```python
+with open('original.txt', 'r') as infile, open('compressed.txt', 'w') as outfile:
+    for line in infile:
+        compressed = ' '.join(line.split())
+        outfile.write(compressed)
+```
+
+**Q: File Comparison: Compares two files and highlights differences.**
+
+```python
+with open('file1.txt') as f1, open('file2.txt') as f2:
+    for i, (l1, l2) in enumerate(zip(f1, f2), 1):
+        if l1 != l2:
+            print(f"Line {i} differs:\nFile1: {l1}File2: {l2}")
+```
+
+**Q: File Versioning: Saves versions of a file with timestamps.**
+
+```python
+import time, shutil
+filename = 'important.txt'
+timestamp = time.strftime('%Y%m%d-%H%M%S')
+shutil.copy(filename, f"backup_{timestamp}.txt")
+```
+
 
 
 # 6. Exception Handling
