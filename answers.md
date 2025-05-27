@@ -463,19 +463,7 @@ greet_func()
 
 ---
 
-### 12. Create a Python script that imports your custom module and uses its functions to perform calculations.
-
-```python
-# main_script.py
-import math_operations
-
-print(math_operations.add(5, 3))
-print(math_operations.multiply(4, 2))
-```
-
----
-
-### 13. Create a Python module (math\_operations.py) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
+### 12. Create a Python module (math\_operations.py) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
 
 ```python
 # math_operations.py
@@ -493,6 +481,18 @@ def divide(a, b):
         return a / b
     else:
         return "Cannot divide by zero"
+```
+
+---
+
+### 13. Create a Python script that imports your custom module and uses its functions to perform calculations.
+
+```python
+# main_script.py
+import math_operations
+
+print(math_operations.add(5, 3))
+print(math_operations.multiply(4, 2))
 ```
 
 ---

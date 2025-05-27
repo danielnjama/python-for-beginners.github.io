@@ -1125,8 +1125,8 @@ greet('Bob')
 11. Create a function that uses a nested function to access a variable defined in the outer function (closure concept).
 
 ## 4.4 Creating and Using Modules
-12. Create a Python script that imports your custom module and uses its functions to perform calculations.
-13. Create a Python module (`math_operations.py`) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
+12. Create a Python module (`math_operations.py`) containing functions for addition, subtraction, multiplication, and division. Import this module and use its functions.
+13. Create a Python script that imports your custom module and uses its functions to perform calculations.
 14. Write a module that contains a function to check if a number is prime. Import and use this module in another script.
 15. Develop a module (`greetings.py`) that defines a function to greet users based on the time of day (morning, afternoon, evening). Import and test it in a separate script.
 
