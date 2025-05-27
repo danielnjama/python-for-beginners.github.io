@@ -1808,6 +1808,41 @@ print("Process Time:", end_process - start_process, "seconds")
 
 ---
 ---
+### Python Projects for Beginners
+
+1. **Number Guessing Game**
+   A game where the computer randomly selects a number and the user has to guess it within a limited number of attempts.
+
+2. **Simple Calculator**
+   Build a command-line calculator that can perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+
+3. **To-Do List App**
+   Create a program that allows users to add, view, and delete tasks from a to-do list stored in a file.
+
+4. **Weather App (using API)**
+   Fetch and display the current weather of a user-specified city using a free weather API like OpenWeatherMap.
+
+5. **Contact Book**
+   Develop a script where users can store, search, and manage contact information (name, phone, email) using a dictionary or a file.
+
+6. **Dice Rolling Simulator**
+   Simulate the rolling of a dice with each roll generating a random number between 1 and 6.
+
+7. **Simple Quiz App**
+   A multiple-choice quiz application that checks answers and gives the score at the end.
+
+8. **Password Generator**
+   Generate strong, random passwords based on user-defined length and complexity.
+
+9. **Currency Converter**
+   Convert an amount from one currency to another using real-time exchange rates via an API.
+
+10. **Digital Clock**
+    Display a live digital clock in the terminal or GUI using `tkinter` with hours, minutes, and seconds.
+
+11. **Publish Your Own Python Module**
+    Identify a real-life problem and solve it using a Python script. Package the solution into a reusable Python module, write proper documentation, and publish it to [PyPI](https://pypi.org/). Share it with friends so they can install it using `pip install your-module-name`.
+
 ---
 # Python Practice Exercises
 
