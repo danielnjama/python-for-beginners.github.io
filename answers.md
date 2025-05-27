@@ -1,6 +1,215 @@
-# 1. Introduction to ```python
+# 1. Introduction to python
+### 1. Running Python
+
+**Q: How do you start Python in interactive mode?**
+A: Open your terminal and type:
+
+```bash
+python
+```
+OR
+```python
+python3
+```
+
+**Q: How do you run a Python script named hello.py from the terminal?**
+A:
+
+```bash
+python hello.py
+```
+
+**Q: What command is used to exit Python interactive mode?**
+A: Use either of the following commands:
+
+```python
+exit()
+```
+
+or press:
+
+```
+Ctrl + Z (Windows) or Ctrl + D (Linux/macOS), then press Enter
+```
+
+---
+
+### 2. Basic Syntax
+
+**Q: Identify the error in the following code and fix it:**
+
+```python
+if 5 > 3:
+print("Five is greater than three")
+```
+
+**A:** The print statement needs to be indented.
+
+```python
+if 5 > 3:
+    print("Five is greater than three")
+```
+
+**Q: What will be the output of the following code?**
+
+```python
+name = "Alice"
+age = 25
+print("My name is" + name + "and I am" + age + "years old.")
+```
+
+**A:** This will raise a `TypeError` because you can't concatenate a string and an integer directly.
+**Correct version:**
+
+```python
+print("My name is " + name + " and I am " + str(age) + " years old.")
+```
+
+**Output:**
+
+```
+My name is Alice and I am 25 years old.
+```
+
+**Q: What will happen if you don’t use indentation correctly in Python?**
+A: Python will raise an `IndentationError`. Indentation is required to define the blocks of code.
+
 
 # 2. Variables and Data Types
+
+**Q: Create a list of 10 numbers ranging from 0 to 20, ensuring that at least 3 numbers appear more than once.**
+
+```python
+numbers = [3, 5, 7, 3, 12, 5, 19, 7, 3, 5]
+```
+
+**Q: Find the maximum and minimum numbers from the list.**
+
+```python
+print("Max:", max(numbers))
+print("Min:", min(numbers))
+```
+
+**Q: Sort the list in ascending and descending order.**
+
+```python
+print("Ascending:", sorted(numbers))
+print("Descending:", sorted(numbers, reverse=True))
+```
+
+**Q: Remove duplicate numbers from the list.**
+
+```python
+unique_numbers = list(set(numbers))
+print("Unique Numbers:", unique_numbers)
+```
+
+**Q: Write a program to merge two lists without duplicates.**
+
+```python
+list1 = [1, 2, 3, 4]
+list2 = [3, 4, 5, 6]
+merged_list = list(set(list1 + list2))
+print("Merged List:", merged_list)
+```
+
+**Q: Calculates their mean, median, and mode, and displays the results.**
+
+```python
+import statistics
+print("Mean:", statistics.mean(numbers))
+print("Median:", statistics.median(numbers))
+print("Mode:", statistics.mode(numbers))
+```
+
+**Q: Create a tuple with at least 5 elements.**
+
+```python
+my_tuple = (10, 20, 30, 40, 50)
+```
+
+**Q: Convert the tuple into a list and add a new element.**
+
+```python
+tuple_to_list = list(my_tuple)
+tuple_to_list.append(60)
+```
+
+**Q: Convert the modified list back into a tuple.**
+
+```python
+new_tuple = tuple(tuple_to_list)
+```
+
+**Q: Write a program to check if a given element exists in a tuple.**
+
+```python
+print(30 in my_tuple)
+```
+
+**Q: Count how many times an element appears in a tuple.**
+
+```python
+print(my_tuple.count(20))
+```
+
+**Q: Create a dictionary with key-value pairs.**
+
+```python
+student = {"name": "John", "age": 20, "grade": "A", "subject": "Math"}
+```
+
+**Q: Add a new key-value pair ("city": "New York") to the dictionary.**
+
+```python
+student["city"] = "New York"
+```
+
+**Q: Update the "age" key by increasing its value by 1.**
+
+```python
+student["age"] += 1
+```
+
+**Q: Remove the "grade" key from the dictionary.**
+
+```python
+del student["grade"]
+```
+
+**Q: Take a string as input and print it.**
+
+```python
+text = input("Enter a string: ")
+print("You entered:", text)
+```
+
+**Q: Print it in reverse order.**
+
+```python
+print("Reversed:", text[::-1])
+```
+
+**Q: Convert the string into uppercase and lowercase.**
+
+```python
+print("Uppercase:", text.upper())
+print("Lowercase:", text.lower())
+```
+
+**Q: Remove all spaces from the string.**
+
+```python
+print("No Spaces:", text.replace(" ", ""))
+```
+
+**Q: Replace all occurrences of "Python" with "Java" in a given string.**
+
+```python
+sentence = "Python is fun. I love Python!"
+print(sentence.replace("Python", "Java"))
+```
+
 
 
 # 3.Control Flow and Conditionals
