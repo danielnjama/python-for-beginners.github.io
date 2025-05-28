@@ -746,6 +746,8 @@ import math
 
 radius = float(input("Enter the radius: "))
 area = math.pi * radius ** 2
+OR
+#area = math.pi * math.pow(radius, 2)
 print(f"Area of the circle: {area:.2f}")
 ```
 
