@@ -705,6 +705,154 @@ shutil.copy(filename, f"backup_{timestamp}.txt")
 
 
 # 7. python Libraries and Modules
+### 1. Random Number Generator
+
+**Question:** Write a Python program that uses the random module to generate a list of 10 random integers between 1 and 100 and then shuffles the list.
+
+**Answer:**
+
+```python
+import random
+
+numbers = [random.randint(1, 100) for _ in range(10)]
+random.shuffle(numbers)
+print("Shuffled Numbers:", numbers)
+```
+
+### 2. File Explorer
+
+**Question:** Develop a script that uses the os module to list all files in a directory and display their sizes in bytes.
+
+**Answer:**
+
+```python
+import os
+
+directory = '.'
+for filename in os.listdir(directory):
+    filepath = os.path.join(directory, filename)
+    if os.path.isfile(filepath):
+        print(f"{filename}: {os.path.getsize(filepath)} bytes")
+```
+
+### 3. Math Operations
+
+**Question:** Create a Python program that uses the math module to calculate the area of a circle given its radius.
+
+**Answer:**
+
+```python
+import math
+
+radius = float(input("Enter the radius: "))
+area = math.pi * radius ** 2
+print(f"Area of the circle: {area:.2f}")
+```
+
+### 4. Date and Time
+
+**Question:** Write a script that uses the datetime module to display the current date and time in the format YYYY-MM-DD HH\:MM\:SS.
+
+**Answer:**
+
+```python
+from datetime import datetime
+
+now = datetime.now()
+print(now.strftime("%Y-%m-%d %H:%M:%S"))
+```
+
+### 5. NumPy Array Operations
+
+**Question:** Develop a Python script that uses the NumPy library to create two arrays and perform element-wise addition and multiplication.
+
+**Answer:**
+
+```python
+import numpy as np
+
+a = np.array([1, 2, 3])
+b = np.array([4, 5, 6])
+
+print("Addition:", a + b)
+print("Multiplication:", a * b)
+```
+
+### 6. Custom Module
+
+**Question:** Create a custom module named calculator.py with functions for addition, subtraction, multiplication, and division. Import and use this module in another script.
+
+**Answer:**
+**calculator.py**
+
+```python
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    return a / b if b != 0 else 'Division by zero error'
+```
+
+**main.py**
+
+```python
+import calculator
+
+print("Add:", calculator.add(10, 5))
+print("Subtract:", calculator.subtract(10, 5))
+print("Multiply:", calculator.multiply(10, 5))
+print("Divide:", calculator.divide(10, 5))
+```
+
+### 7. Dependency Management
+
+**Question:** What is the purpose of a requirements.txt file? Create a requirements.txt file for a project that requires the requests, numpy, and pandas libraries.
+
+**Answer:**
+
+* The `requirements.txt` file lists all the dependencies for a Python project so they can be easily installed using `pip install -r requirements.txt`.
+
+**requirements.txt:**
+
+```
+requests
+numpy
+pandas
+```
+
+### 8. Virtual Environment
+
+**Question:** Create a virtual environment for a project and install the flask library. Write a simple Flask application that displays "Hello, World!" when run.
+
+**Answer:**
+
+```sh
+python -m venv myenv
+source myenv/bin/activate  # or myenv\Scripts\activate on Windows
+pip install flask
+```
+
+**app.py**
+
+```python
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello, World!"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
 
 
 # 8. Date and Time
