@@ -1348,16 +1348,27 @@ You can create **custom exception classes** to handle specific errors in your co
 ### Example: Creating and Using a Custom Exception Class
 
 ```python
-class CustomError(Exception):
+#creating a custom class
+class MyCustomError(Exception):
+    """Custom exception class for specific error handling."""
     def __init__(self, message):
         super().__init__(message)
+        self.message = message
+
+
+#usage example
+def divide(a, b):
+    if b == 0:
+        raise MyCustomError("Denominator cannot be zero.")
+    return a / b
 
 try:
-    raise CustomError("This is a custom exception.")
-except CustomError as e:
-    print(f"Custom Exception: {e}")
-
----
+    result = divide(10, 0)
+except MyCustomError as e:
+    print(f"Caught a custom error: {e}")
+```
+Example 2
+```python
 class InsufficientFundsError(Exception):
     def __init__(self, message):
         super().__init__(message)
