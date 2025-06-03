@@ -703,6 +703,189 @@ shutil.copy(filename, f"backup_{timestamp}.txt")
 
 # 6. Exception Handling
 
+## 1. Division with Exception Handling
+
+```python
+try:
+    a = float(input("Enter numerator: "))
+    b = float(input("Enter denominator: "))
+    result = a / b
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+except ValueError:
+    print("Error: Invalid input. Please enter numbers.")
+```
+
+## 2. File Handling with Exception Handling
+
+```python
+try:
+    with open("data.txt", "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("Error: File not found.")
+```
+
+## 3. Index Validation with Custom Exception
+
+```python
+class IndexOutOfRange(Exception):
+    pass
+
+def access_element(lst, idx):
+    try:
+        if idx >= len(lst) or idx < 0:
+            raise IndexOutOfRange("Index is out of range.")
+        print("Element at index", idx, "is", lst[idx])
+    except IndexOutOfRange as e:
+        print(e)
+
+access_element([1, 2, 3], 5)
+```
+
+## 4. Simple Calculator with Error Handling
+
+```python
+try:
+    num1 = float(input("Enter first number: "))
+    operator = input("Enter operator (+, -, *, /): ")
+    num2 = float(input("Enter second number: "))
+
+    if operator == "+":
+        print("Result:", num1 + num2)
+    elif operator == "-":
+        print("Result:", num1 - num2)
+    elif operator == "*":
+        print("Result:", num1 * num2)
+    elif operator == "/":
+        print("Result:", num1 / num2)
+    else:
+        print("Invalid operator")
+except ValueError:
+    print("Error: Invalid input")
+except ZeroDivisionError:
+    print("Error: Division by zero")
+```
+
+## 5. Custom Exception for a Project
+
+```python
+class InvalidOperationError(Exception):
+    pass
+
+def perform_operation(op):
+    if op not in ["start", "stop", "restart"]:
+        raise InvalidOperationError("Unsupported operation.")
+    else:
+        print(f"Operation '{op}' performed successfully.")
+
+try:
+    perform_operation("pause")
+except InvalidOperationError as e:
+    print(e)
+```
+
+## 6. Logging for Debugging
+
+```python
+import logging
+
+logging.basicConfig(filename='calculator.log', level=logging.DEBUG)
+
+def calc(a, b, op):
+    try:
+        if op == "+":
+            result = a + b
+        elif op == "-":
+            result = a - b
+        elif op == "*":
+            result = a * b
+        elif op == "/":
+            result = a / b
+        else:
+            raise ValueError("Invalid operation")
+        logging.debug(f"{a} {op} {b} = {result}")
+        return result
+    except Exception as e:
+        logging.error(f"Error occurred: {e}")
+        return None
+
+print(calc(10, 0, "/"))
+```
+
+## 7. Handling Multiple Exceptions
+
+```python
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+    print("Result:", result)
+except (ValueError, TypeError, ZeroDivisionError) as e:
+    print("Error:", e)
+```
+
+## 8. Database Connection with Exception Handling
+
+```python
+class DatabaseConnectionError(Exception):
+    pass
+
+def connect_to_db(status):
+    if status == "timeout":
+        raise TimeoutError("Connection timed out")
+    elif status == "error":
+        raise DatabaseConnectionError("Failed to connect to database")
+    else:
+        print("Connected successfully")
+
+try:
+    connect_to_db("error")
+except (TimeoutError, DatabaseConnectionError) as e:
+    print("Database Error:", e)
+```
+
+## 9. Input Validation with Exception Handling
+
+```python
+class InvalidAgeError(Exception):
+    pass
+
+class InvalidEmailError(Exception):
+    pass
+
+def validate_input(age, email):
+    if not age.isdigit() or int(age) < 0:
+        raise InvalidAgeError("Invalid age provided.")
+    if "@" not in email or "." not in email:
+        raise InvalidEmailError("Invalid email format.")
+
+try:
+    validate_input("twenty", "testemail.com")
+except (InvalidAgeError, InvalidEmailError) as e:
+    print(e)
+```
+
+## 10. Recursive Function with Exception Handling
+
+```python
+def factorial(n):
+    try:
+        if not isinstance(n, int):
+            raise TypeError("Input must be an integer.")
+        if n < 0:
+            raise ValueError("Factorial not defined for negative numbers.")
+        if n == 0:
+            return 1
+        return n * factorial(n - 1)
+    except Exception as e:
+        print("Error:", e)
+
+print(factorial(-5))
+```
+
+
 
 # 7. python Libraries and Modules
 ### 1. Random Number Generator
