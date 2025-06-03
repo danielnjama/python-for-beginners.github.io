@@ -1347,6 +1347,7 @@ You can create **custom exception classes** to handle specific errors in your co
 
 ### Example: Creating and Using a Custom Exception Class
 
+Example 1
 ```python
 #creating a custom class
 class MyCustomError(Exception):
