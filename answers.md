@@ -860,6 +860,8 @@ def validate_input(age, email):
         raise InvalidAgeError("Invalid age provided.")
     if "@" not in email or "." not in email:
         raise InvalidEmailError("Invalid email format.")
+    if age and email:
+        print(f"{age} : {email}")
 
 try:
     validate_input("twenty", "testemail.com")

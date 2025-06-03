@@ -758,6 +758,7 @@ The `break` statement exits a loop prematurely, while the `continue` statement s
 
 **Example (`break`):**
 ```python
+#prints 0-4
 for num in range(10):
     if num == 5:
         break
@@ -766,6 +767,7 @@ for num in range(10):
 
 **Example (`continue`):**
 ```python
+#prints odd numbers
 for num in range(10):
     if num % 2 == 0:
         continue
@@ -783,6 +785,8 @@ if age >= 18:
         print("You are a senior citizen.")
     else:
         print("You are an adult.")
+else:
+    print('You are under 18')
 ```
 
 ### 3.7 Logical Operators (`and`, `or`, `not`)
@@ -790,11 +794,31 @@ Logical operators are used to combine multiple conditions.
 
 **Example:**
 ```python
+#Both conditions must be True
 age = 25
 has_id = True
 if age >= 18 and has_id:
     print("You can enter the club.")
 ```
+```python
+#Atlest one of the conditions must be True
+age = 25
+has_id = True
+if age >= 18 and has_id:
+    print("You can enter the club.")
+```
+```python
+# print odd numbers
+numbers = [0, 1, 2, 3, 4, 5]
+
+for num in numbers:
+    if not num % 2 == 0:
+        print(f"{num} is odd")
+
+```
+
+
+
 
 ### 3.8 Loop Control Statements (`pass` statement)
 The `pass` statement is used when a statement is required syntactically but no code needs to be executed.
@@ -1777,6 +1801,56 @@ pip install numpy pandas
    ```sh
    pip install numpy pandas
    ```
+5. **Upgrade Pip Version**
+```sh
+pip install --upgrade pip
+```
+### Note:: 
+# PowerShell Virtual Environment Activation Error
+
+## ❌ Common Error Message
+
+When trying to activate a Python virtual environment in PowerShell, users often encounter an error like:
+
+```
+.\env\Scripts\Activate.ps1 : File C:\path\to\env\Scripts\Activate.ps1 cannot be loaded because 
+running scripts is disabled on this system. For more information, see about_Execution_Policies at 
+https:/go.microsoft.com/fwlink/?LinkID=135170.
+```
+
+## Cause
+
+This happens because PowerShell's **execution policy** prevents running scripts, including the activation script for a Python virtual environment.
+
+By default, the policy is set to `Restricted`, which blocks all scripts.
+
+## ✅ Resolution
+
+To allow script execution (safely for the current user only), run:
+
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+This command:
+- Allows locally created scripts to run.
+- Requires downloaded scripts to be signed.
+- Only applies to the **current user**, not system-wide.
+
+```powershell
+Get-ExecutionPolicy
+```
+
+### Before Fix:
+```powershell
+Restricted
+```
+
+### After Fix:
+```powershell
+RemoteSigned
+```
+
 
 # pip Commands
 
