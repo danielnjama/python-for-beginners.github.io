@@ -2070,6 +2070,198 @@ print("Process Time:", end_process - start_process, "seconds")
 
 
 ---
+### Python Debugging Quiz
+
+Below are 20 debugging questions based on Python fundamentals. Each block of code has an issue that needs to be fixed to produce the expected output.
+
+---
+
+**1. Variable Naming and Data Types**
+
+```python
+# Expected Output: The total is 35
+number 1 = 15
+number2 = "20"
+total = number 1 + number2
+print("The total is" + total)
+```
+
+**2. Conditional Statement Syntax**
+
+```python
+# Expected Output: You passed the exam!
+score = 72
+if score > 50
+    print("You passed the exam!")
+else:
+print("You failed!")
+```
+
+**3. Loop Logic Error**
+
+```python
+# Expected Output: Print numbers from 1 to 5
+for i in range(1, 5):
+    print(i)
+```
+
+**4. Function with Return Value**
+
+```python
+# Expected Output: Square of 4 is 16
+def square(x)
+    return x * x
+
+print("Square of 4 is " + square(4))
+```
+
+**5. File Reading**
+
+```python
+# Expected Output: File contents printed line by line
+file = open("sample.txt")
+for line in file
+print(line)
+file.close()
+```
+
+**6. List Indexing**
+
+```python
+# Expected Output: The third item is Cherry
+fruits = ["Apple", "Banana", "Cherry"]
+print("The third item is " + fruits[3])
+```
+
+**7. Dictionary Access**
+
+```python
+# Expected Output: Alice's score is 90
+scores = {"Alice": 90, "Bob": 80}
+print("Alice's score is " + scores["Alic"])
+```
+
+**8. Boolean Logic**
+
+```python
+# Expected Output: Access granted
+age = 20
+has_id = True
+if age >= 18 or has_id = True:
+    print("Access granted")
+```
+
+**9. List Append Error**
+
+```python
+# Expected Output: List now contains 5 elements
+my_list = [1, 2, 3, 4]
+my_list.append = 5
+print("List now contains", len(my_list), "elements")
+```
+
+**10. String Formatting**
+
+```python
+# Expected Output: Hello, John!
+name = "John"
+print("Hello, %s!".format(name))
+```
+
+**11. Using a Module**
+
+```python
+# Expected Output: Square root of 16 is 4.0
+import maths
+print("Square root of 16 is", maths.sqrt(16))
+```
+
+**12. While Loop Condition**
+
+```python
+# Expected Output: Count from 1 to 5
+count = 1
+while count < 5:
+    print(count)
+    count = count + 1
+```
+
+**13. Modifying a Global Variable**
+
+```python
+# Expected Output: Counter is now 11
+counter = 10
+def increment():
+    counter = counter + 1
+increment()
+print("Counter is now", counter)
+```
+
+**14. Function Parameter**
+
+```python
+# Expected Output: Welcome, Sarah
+
+def greet(name):
+    print("Welcome," name)
+
+greet("Sarah")
+```
+
+**15. Using pop() in List**
+
+```python
+# Expected Output: Removed item: Banana
+fruits = ["Apple", "Banana", "Cherry"]
+print("Removed item:", fruits.pop(3))
+```
+
+**16. Nested If**
+
+```python
+# Expected Output: Login successful
+username = "admin"
+password = "1234"
+if username == "admin":
+    if password = "1234":
+        print("Login successful")
+```
+
+**17. Checking Even or Odd**
+
+```python
+# Expected Output: 7 is odd
+number = 7
+if number % 2 = 1:
+    print(number, "is odd")
+```
+
+**18. Creating and Importing Module**
+
+```python
+# Expected Output: 10 + 5 = 15
+from my_module import add
+print("10 + 5 =", add(10, 5))
+```
+
+**19. Random Number Generator**
+
+```python
+# Expected Output: A random number between 1 and 10
+import random
+print(random.randint[1, 10])
+```
+
+**20. Date and Time Format**
+
+```python
+# Expected Output: 2024-12-31 23:59:59
+import datetime
+now = datetime.now()
+print(now.strftime("%Y/%m/%d %H:%M:%S"))
+```
+
+
 ---
 ### Python Projects for Beginners
 
