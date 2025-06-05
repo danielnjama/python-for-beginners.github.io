@@ -1958,6 +1958,8 @@ print("Parsed Datetime:", parsed_datetime)
 # Calculate future dates
 future_datetime = current_datetime + timedelta(days=7)
 print("Date 7 Days from Now:", future_datetime)
+
+#Other timedelta options: hours, weeks, minutes, seconds etc. 
 ```
 
 ---
@@ -2000,10 +2002,9 @@ ny_time = datetime.now(tz)
 print("Current Time in New York:", ny_time)
 
 # Perform date arithmetic
-one_week_ago = ny_time - timedelta(weeks=1)
-print("One Week Ago in New York:", one_week_ago)
 ```
 
+Get a list of TimeZones here([TimeZones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)) 
 ---
 
 ## 8.4 The `time` Module

@@ -1043,3 +1043,148 @@ if __name__ == '__main__':
 
 
 # 8. Date and Time
+### Quiz and Solutions on Date and Time in Python
+
+---
+
+#### - Days Until Birthday
+Write a Python script that calculates the number of days remaining until a specific date (e.g., a birthday) and displays it to the user.
+
+```python
+from datetime import datetime
+
+birthday = datetime(2025, 12, 25)
+now = datetime.now()
+difference = birthday - now
+print("Days until birthday:", difference.days)
+```
+
+#### - Time Zone Converter
+Create a program that converts a given date and time from one time zone to another. Allow the user to input the date, time, and time zones.
+
+```python
+from datetime import datetime
+import pytz
+
+date_str = input("Enter date and time (YYYY-MM-DD HH:MM): ")
+from_zone = pytz.timezone(input("Enter source time zone: "))
+to_zone = pytz.timezone(input("Enter target time zone: "))
+
+dt = datetime.strptime(date_str, "%Y-%m-%d %H:%M")
+dt = from_zone.localize(dt)
+converted = dt.astimezone(to_zone)
+print("Converted Time:", converted)
+```
+
+#### - World Clock
+Build a simple world clock application that displays the current time in multiple time zones (e.g., New York, London, Tokyo).
+
+```python
+from datetime import datetime
+import pytz
+
+zones = ['America/New_York', 'Europe/London', 'Asia/Tokyo']
+for zone in zones:
+    tz = pytz.timezone(zone)
+    time = datetime.now(tz)
+    print(f"Time in {zone}: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+```
+
+#### - Meeting Duration Calculator
+Write a script that calculates the difference in hours and minutes between two timestamps (e.g., for tracking meeting durations).
+```python
+from datetime import datetime
+
+start = datetime.strptime("2025-06-05 14:00", "%Y-%m-%d %H:%M")
+end = datetime.strptime("2025-06-05 15:45", "%Y-%m-%d %H:%M")
+duration = end - start
+hours, remainder = divmod(duration.seconds, 3600)
+minutes = remainder // 60
+print(f"Duration: {hours} hours and {minutes} minutes")
+```
+
+#### - Age Calculator
+Develop a program that calculates a person’s age in years, months, and days based on their birthdate.
+
+```python
+from datetime import datetime
+
+birthdate = datetime.strptime("2000-01-01", "%Y-%m-%d")
+today = datetime.today()
+age_days = (today - birthdate).days
+years = age_days // 365
+months = (age_days % 365) // 30
+days = (age_days % 365) % 30
+print(f"Age: {years} years, {months} months, {days} days")
+```
+
+#### - Leap Year Checker
+Write a function that checks if a given year is a leap year.
+
+```python
+def is_leap(year):
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
+
+print(is_leap(2024))
+```
+
+#### - Countdown Timer
+Create a countdown timer that takes a future date and time as input and displays the remaining time in days, hours, minutes, and seconds.
+
+```python
+from datetime import datetime
+import time
+
+future = datetime.strptime("2025-06-06 18:00:00", "%Y-%m-%d %H:%M:%S")
+while True:
+    now = datetime.now()
+    remaining = future - now
+    if remaining.total_seconds() <= 0:
+        print("Countdown complete!")
+        break
+    print("Remaining:", remaining)
+    time.sleep(1)
+```
+
+#### - Date Difference
+Write a program that calculates the difference between two dates in years, months, and days.
+
+```python
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
+
+date1 = datetime.strptime("2000-01-01", "%Y-%m-%d")
+date2 = datetime.today()
+diff = relativedelta(date2, date1)
+print(f"Difference: {diff.years} years, {diff.months} months, {diff.days} days")
+```
+
+#### - File Timestamps
+Use the os and datetime modules to display the creation and modification timestamps of a file.
+```python
+import os
+from datetime import datetime
+
+file_path = "example.txt"
+created = os.path.getctime(file_path)
+modified = os.path.getmtime(file_path)
+print("Created:", datetime.fromtimestamp(created))
+print("Modified:", datetime.fromtimestamp(modified))
+```
+
+#### - Time-Based Greeting
+Write a script that greets the user with "Good Morning," "Good Afternoon," or "Good Evening" based on the current time.
+
+```python
+from datetime import datetime
+
+now = datetime.now()
+hour = now.hour
+if hour < 12:
+    greeting = "Good Morning"
+elif hour < 18:
+    greeting = "Good Afternoon"
+else:
+    greeting = "Good Evening"
+print(greeting)
+```
