@@ -1121,6 +1121,12 @@ print(f"Age: {years} years, {months} months, {days} days")
 #### - Leap Year Checker
 Write a function that checks if a given year is a leap year.
 
+Note: A leap year is a year that has 366 days instead of the usual 365 days. The extra day is added to the month of February, making it 29 days long instead of 28.
+
+characteristics of a leap year:
+It is divisible by 4,
+except for years that are divisible by 100,
+unless the year is also divisible by 400.
 ```python
 def is_leap(year):
     return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
