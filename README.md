@@ -784,7 +784,7 @@ if age >= 18:
     if age >= 65:
         print("You are a senior citizen.")
     else:
-        print("You are an adult.")
+        print("You are a junior citizen.")
 else:
     print('You are under 18')
 ```
