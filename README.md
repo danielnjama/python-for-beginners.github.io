@@ -1232,23 +1232,104 @@ Python allows you to perform file operations like renaming, deleting, and checki
 
 ```python
 import os
+```
 
-# Check if a file exists
+## ✅ 1. Check if a file exists
+```python
 if os.path.exists("example.txt"):
     print("File exists.")
+else:
+    print("File does not exist.")
+```
 
-# Rename a file
+## ✅ 2. Rename a file
+```python
 os.rename("example.txt", "new_example.txt")
+```
 
-# Delete a file
+## ✅ 3. Delete a file
+```python
 os.remove("new_example.txt")
+```
 
-# Error handling when opening a file
+## ✅ 4. Error handling when opening a file
+```python
 try:
     with open("nonexistent_file.txt", "r") as file:
         content = file.read()
 except FileNotFoundError:
     print("File not found.")
+```
+
+---
+
+## 📁 Directory Management
+
+### ✅ 5. Create a new directory
+```python
+os.mkdir("new_folder")
+```
+
+### ✅ 6. Create nested directories
+```python
+os.makedirs("parent_folder/child_folder")
+```
+
+### ✅ 7. Remove a directory (only if empty)
+```python
+os.rmdir("new_folder")
+```
+
+### ✅ 8. Remove nested directories (if all are empty)
+```python
+os.removedirs("parent_folder/child_folder")
+```
+
+### ✅ 9. List files and directories
+```python
+files = os.listdir(".")
+print(files)
+```
+
+---
+
+## 🧭 Path Management
+
+### ✅ 10. Get current working directory
+```python
+cwd = os.getcwd()
+print("Current directory:", cwd)
+```
+
+### ✅ 11. Change current directory
+```python
+os.chdir("/path/to/another/directory")
+```
+
+### ✅ 12. Join paths safely
+```python
+path = os.path.join("folder", "file.txt")
+print(path)
+```
+
+---
+
+## 🧪 Environment Variables
+
+### ✅ 13. Get environment variable
+```python
+home = os.getenv("HOME")
+print("Home directory:", home)
+```
+
+### ✅ 14. Set environment variable
+```python
+os.environ["MY_ENV_VAR"] = "my_value"
+```
+
+### ✅ 15. Execute a system command
+```python
+os.system("echo Hello from shell")
 ```
 
 ---
