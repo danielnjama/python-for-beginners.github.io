@@ -1234,7 +1234,7 @@ Python allows you to perform file operations like renaming, deleting, and checki
 import os
 ```
 
-## ✅ 1. Check if a file exists
+##  1. Check if a file exists
 ```python
 if os.path.exists("example.txt"):
     print("File exists.")
@@ -1242,17 +1242,17 @@ else:
     print("File does not exist.")
 ```
 
-## ✅ 2. Rename a file
+##  2. Rename a file
 ```python
 os.rename("example.txt", "new_example.txt")
 ```
 
-## ✅ 3. Delete a file
+##  3. Delete a file
 ```python
 os.remove("new_example.txt")
 ```
 
-## ✅ 4. Error handling when opening a file
+##  4. Error handling when opening a file
 ```python
 try:
     with open("nonexistent_file.txt", "r") as file:
@@ -1263,29 +1263,29 @@ except FileNotFoundError:
 
 ---
 
-## 📁 Directory Management
+## Directory Management
 
-### ✅ 5. Create a new directory
+###  5. Create a new directory
 ```python
 os.mkdir("new_folder")
 ```
 
-### ✅ 6. Create nested directories
+###  6. Create nested directories
 ```python
 os.makedirs("parent_folder/child_folder")
 ```
 
-### ✅ 7. Remove a directory (only if empty)
+###  7. Remove a directory (only if empty)
 ```python
 os.rmdir("new_folder")
 ```
 
-### ✅ 8. Remove nested directories (if all are empty)
+###  8. Remove nested directories (if all are empty)
 ```python
 os.removedirs("parent_folder/child_folder")
 ```
 
-### ✅ 9. List files and directories
+###  9. List files and directories
 ```python
 files = os.listdir(".")
 print(files)
@@ -1293,20 +1293,20 @@ print(files)
 
 ---
 
-## 🧭 Path Management
+##  Path Management
 
-### ✅ 10. Get current working directory
+###  10. Get current working directory
 ```python
 cwd = os.getcwd()
 print("Current directory:", cwd)
 ```
 
-### ✅ 11. Change current directory
+###  11. Change current directory
 ```python
 os.chdir("/path/to/another/directory")
 ```
 
-### ✅ 12. Join paths safely
+###  12. Join paths safely
 ```python
 path = os.path.join("folder", "file.txt")
 print(path)
@@ -1314,20 +1314,20 @@ print(path)
 
 ---
 
-## 🧪 Environment Variables
+##  Environment Variables
 
-### ✅ 13. Get environment variable
+###  13. Get environment variable
 ```python
 home = os.getenv("HOME")
 print("Home directory:", home)
 ```
 
-### ✅ 14. Set environment variable
+###  14. Set environment variable
 ```python
 os.environ["MY_ENV_VAR"] = "my_value"
 ```
 
-### ✅ 15. Execute a system command
+###  15. Execute a system command
 ```python
 os.system("echo Hello from shell")
 ```
@@ -1905,7 +1905,7 @@ This happens because PowerShell's **execution policy** prevents running scripts,
 
 By default, the policy is set to `Restricted`, which blocks all scripts.
 
-## ✅ Resolution
+##  Resolution
 
 To allow script execution (safely for the current user only), run:
 
