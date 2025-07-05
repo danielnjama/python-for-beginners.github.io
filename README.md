@@ -334,6 +334,8 @@ Python supports various data structures, including:
    
 Example: Working with different data structures:
 
+## Python Data Types – Code Examples Only
+
 ```python
 # Numbers
 integer_num = 42
@@ -350,7 +352,79 @@ coordinates = (10, 20)
 
 # Dictionaries
 person = {'name': 'Alice', 'age': 30}
+
+# Sets
+unique_numbers = {1, 2, 3, 2}  # Duplicate will be removed
+
+# Booleans
+is_active = True
+is_logged_in = False
 ```
+
+
+### Understanding the differences between Lists, Tuples, and Sets
+## Lists – Ordered Collection
+
+**Definition:**
+Lists maintain the **order** in which items are added. You can access elements using indexes.
+
+**Example:**
+
+```python
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # Output: apple
+```
+
+You can change, add, or remove elements.
+
+---
+
+## Tuples – Immutable Collection
+
+**Definition:**
+Tuples are similar to lists but **cannot be changed** after creation (i.e., they are immutable).
+
+**Example:**
+
+```python
+t = (10, 20, 30)
+t[0] = 99  # Raises TypeError
+```
+
+Useful when you want to **protect data from modification**.
+
+---
+
+## Sets – Unordered Collection
+
+**Definition:**
+Sets are **unordered**, meaning the items do not maintain the order of insertion. They only store **unique** items.
+
+**Example:**
+
+```python
+my_set = {"apple", "banana", "cherry"}
+for item in my_set:
+    print(item)  # Order may vary
+```
+
+You can't access elements by index. Good for checking membership and removing duplicates.
+
+---
+
+##  Summary Table
+
+| Type  | Ordered? | Changeable? | Allows Duplicates? |
+| ----- | -------- | ----------- | ------------------ |
+| List  | ✅ Yes    | ✅ Yes       | ✅ Yes              |
+| Tuple | ✅ Yes    | ❌ No        | ✅ Yes              |
+| Set   | ❌ No     | ✅ Yes       | ❌ No (unique only) |
+
+---
+
+
+
+
 ## 2.3 Working with Data Structures
 You can manipulate and operate on data structures, such as adding, removing, or accessing elements within them.
 
