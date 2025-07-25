@@ -734,15 +734,18 @@ except FileNotFoundError:
 class IndexOutOfRange(Exception):
     pass
 
-def access_element(lst, idx):
+def access_list(lst,idx):
     try:
-        if idx >= len(lst) or idx < 0:
-            raise IndexOutOfRange("Index is out of range.")
-        print("Element at index", idx, "is", lst[idx])
-    except IndexOutOfRange as e:
-        print(e)
+        if idx >= len(lst) or idx < -len(lst):
+            raise IndexOutOfRange("Index is out of range!")
+        else:
+            print(lst[idx])
+    except IndexOutOfRange:
+        print("Index is out of range!")
 
-access_element([1, 2, 3], 5)
+
+
+access_list([2,3,4,5], 4) 
 ```
 
 ## 4. Simple Calculator with Error Handling
@@ -867,6 +870,44 @@ try:
     validate_input("twenty", "testemail.com")
 except (InvalidAgeError, InvalidEmailError) as e:
     print(e)
+```
+OR
+```python
+
+#Email
+class InvalidEmail(Exception):
+    pass
+
+
+def validate_email(email):
+    # admin@dtechnologys.com 
+    if '@' not in email or '.' not in email:
+        raise InvalidEmail("Invalid email!")
+    else:
+        print(f"OK: {email}")
+
+try:
+    validate_email('admin@emailcom')
+except InvalidEmail:
+    print("Invalid email")
+
+#Age
+class InvalidAge(Exception):
+    pass
+
+def valid_age(age): #'admin' '10'
+    if not str(age).isdigit() or int(age) < 0: #True
+        raise InvalidAge("Invalid age")
+    else:
+        print(f"OK: {age}")
+    
+try:
+    valid_age('12')
+except InvalidAge:
+    print("Invalid Age!")
+
+
+
 ```
 
 ## 10. Recursive Function with Exception Handling
