@@ -1249,8 +1249,6 @@ Python allows you to read files using the `open()` function and then manually cl
 file = open('example.txt', 'r')  # Open the file in read mode
 content = file.read()            # Read the file content
 print(content)
-f = open("geek.txt", "r")
-
 print("Filename:", file.name)
 print("Mode:", file.mode)
 print("Is Closed?", file.closed)
