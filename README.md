@@ -1236,10 +1236,73 @@ greet('Bob')
 File handling is a fundamental aspect of programming that allows you to read from and write to files. Python provides built-in functions and methods to work with text files, binary files, and perform file operations. This section covers reading, writing, and managing files, along with error handling and best practices.
 
 ---
+File operation can be done in two ways:
+- Default method(open method)
+- Using the `with` method
+##  Default Method (Manual File Handling)
 
-## 5.1 Reading and Writing Text Files
+Python allows you to read files using the `open()` function and then manually closing the file after use.
+
+### Example:
+
+```python
+file = open('example.txt', 'r')  # Open the file in read mode
+content = file.read()            # Read the file content
+print(content)
+f = open("geek.txt", "r")
+
+print("Filename:", file.name)
+print("Mode:", file.mode)
+print("Is Closed?", file.closed)
+
+file.close()#Manually close the file
+print("Is Closed?", file.closed)
+```
+
+---
+
+## Why This Method is **Not Recommended**
+
+Using `open()` without proper file closure can lead to several issues:
+
+### 1. **Resource Leaks**
+
+* Open files consume system resources (file descriptors).
+* Forgetting to close files can cause resource exhaustion, especially in loops or large applications.
+
+### 2. **Data Loss (During Write)**
+
+* When writing to a file, data is often **buffered**.
+* Not closing the file might prevent that data from being flushed to disk, causing partial or total data loss.
+
+### 3. **File Locking Problems**
+
+* Some systems place a lock on open files.
+* If a file is left open, other programs or users may not be able to access it until your program exits.
+
+### 4. **Error-Prone**
+
+* If an exception occurs before `file.close()` is called, the file remains open unless handled manually with `try...finally`.
+
+---
+
+## Recommended: Use the `with` Statement
+
+You should use the `with` statement, which handles opening and closing the file **automatically**, even if an error occurs.
+
+### Why `with` is Better:
+
+* Guarantees the file is closed.
+* Cleaner, shorter, and easier to read.
+* Prevents the risks outlined above.
+
+---
+
+
+## 5.1 Reading and Writing Text Files using the `with` method.
 
 Python provides simple and efficient ways to read from and write to text files. The `open()` function is used to open a file, and the `with` statement ensures that the file is properly closed after usage.
+
 
 ### Example: Reading a Text File
 
